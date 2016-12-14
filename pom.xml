@@ -15,6 +15,6 @@
     </parent>
 
     <modules>
-        <module>tabula-drugs-rest</module>
+        <module>drug-rest</module>
     </modules>
 </project>
