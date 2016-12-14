@@ -2,3 +2,4 @@ tabula-drugs-rest/.idea/
 .idea/
 *.iml
 tabula-drugs-rest/target/
+drug-rest/target/
