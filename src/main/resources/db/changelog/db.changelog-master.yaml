@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: vladyslav_vinnyk
+      changes:
+        - createTable:
+            tableName: drug_item
+            columns:
+              - column:
+                  name: rxnormId
+                  type: varchar(255)
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rusName
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
