@@ -20,9 +20,10 @@ public class Drug {
 
     private String rusName;
 
-    public Drug(IdGroup idGroup) {
+    public Drug(IdGroup idGroup, String rusName) {
         this.rxnormId = idGroup.getRxnormId();
         this.name = idGroup.getName();
+        this.rusName = rusName;
     }
 
     public String getRxnormId() {

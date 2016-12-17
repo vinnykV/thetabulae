@@ -1,6 +1,6 @@
 package com.tabula.drugs.configuration;
 
-import com.tabula.drugs.utils.Converter;
+import com.tabula.drugs.utils.XmlConverter;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author Vladyslav_Vinnyk on 12/14/2016.
  */
-@Profile("default")
 @Configuration
 public class ApplicationConfig {
 
@@ -23,8 +22,8 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public Converter getHandler() {
-        Converter handler = new Converter();
+    public XmlConverter getHandler() {
+        XmlConverter handler = new XmlConverter();
         handler.setMarshaller(getCastorMarshaller());
         handler.setUnmarshaller(getCastorMarshaller());
         return handler;

@@ -14,7 +14,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * @author Vladyslav_Vinnyk on 12/15/2016.
  */
-public class Converter {
+public class XmlConverter {
     private Marshaller marshaller;
     private Unmarshaller unmarshaller;
 

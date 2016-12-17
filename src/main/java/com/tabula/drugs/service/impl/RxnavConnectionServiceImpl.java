@@ -1,10 +1,10 @@
 package com.tabula.drugs.service.impl;
 
-import com.sun.org.apache.regexp.internal.RE;
 import com.tabula.drugs.dto.RxNormDataDto;
 import com.tabula.drugs.model.Drug;
 import com.tabula.drugs.service.api.RxnavConnectionService;
-import com.tabula.drugs.utils.Converter;
+import com.tabula.drugs.utils.XmlConverter;
+import com.tabula.drugs.utils.translator.api.Transliterator;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -14,13 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
-import org.w3c.dom.Document;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Locale;
 
 /**
  * @author Vladyslav_Vinnyk on 12/15/2016.
@@ -31,15 +29,18 @@ public class RxnavConnectionServiceImpl implements RxnavConnectionService {
     private RestOperations restOperations;
 
     @Autowired
-    private Converter converter;
+    private XmlConverter xmlConverter;
+
+    @Autowired
+    private Transliterator transliterator;
 
     @Override
     public Drug getDrugsByName(String name) {
         name = "lipitor";
         RestTemplate restTemplate = new RestTemplate();
         try {
-            RxNormDataDto rxNormDataDto = (RxNormDataDto) converter.doUnMarshaling(get("https://rxnav.nlm.nih.gov/REST/rxcui?name=" + name));
-            return new Drug(rxNormDataDto.getIdGroup());
+            RxNormDataDto rxNormDataDto = (RxNormDataDto) xmlConverter.doUnMarshaling(get("https://rxnav.nlm.nih.gov/REST/rxcui?name=" + name));
+            return new Drug(rxNormDataDto.getIdGroup(), transliterator.transliterate(rxNormDataDto.getIdGroup().getName().toLowerCase(Locale.ENGLISH)));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -51,8 +52,8 @@ public class RxnavConnectionServiceImpl implements RxnavConnectionService {
         RestTemplate restTemplate = new RestTemplate();
 
         try {
-            RxNormDataDto rxNormDataDto = (RxNormDataDto) converter.doUnMarshaling(get("https://rxnav.nlm.nih.gov/REST/rxcui/" + rxnormId));
-            return new Drug(rxNormDataDto.getIdGroup());
+            RxNormDataDto rxNormDataDto = (RxNormDataDto) xmlConverter.doUnMarshaling(get("https://rxnav.nlm.nih.gov/REST/rxcui/" + rxnormId));
+            return new Drug(rxNormDataDto.getIdGroup(), transliterator.transliterate(rxNormDataDto.getIdGroup().getName().toLowerCase(Locale.ENGLISH)));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
