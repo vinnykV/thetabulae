@@ -29,7 +29,7 @@ public class EngToRusTransliteratorTest {
     private Transliterator transliterator;
 
     @Test
-    public void shouldTransliterateLipitor() {
+    public void shouldTransliterateLipitorEngToRus() {
         String expected = "липитор";
         String actual = transliterator.transliterate("lipitor");
 
@@ -37,7 +37,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteMorphine() {
+    public void shouldTransliteradteMorphineEngToRus() {
         String expected = "морфин";
         String actual = transliterator.transliterate("morphine");
 
@@ -45,7 +45,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteNexium() {
+    public void shouldTransliteradteNexiumEngToRus() {
         String expected = "нексиум";
         String actual = transliterator.transliterate("nexium");
 
@@ -53,7 +53,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteAmoxicillin() {
+    public void shouldTransliteradteAmoxicillinEngToRus() {
         String expected = "амоксициллин";
         String actual = transliterator.transliterate("amoxicillin");
 
@@ -61,7 +61,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteLisinopril() {
+    public void shouldTransliteradteLisinoprilEngToRus() {
         String expected = "лизиноприл";
         String actual = transliterator.transliterate("lisinopril");
 
@@ -69,25 +69,23 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteEsomeprazole() {
+    public void shouldTransliteradteEsomeprazoleEngToRus() {
         String expected = "эзомепразол";
         String actual = transliterator.transliterate("esomeprazole");
 
         Assert.assertEquals(expected, actual);
     }
 
-
     @Test
-    public void shouldTransliteradteAtorvastatin() {
+    public void shouldTransliteradteAtorvastatinEngToRus() {
         String expected = "аторвастатин";
         String actual = transliterator.transliterate("atorvastatin");
 
         Assert.assertEquals(expected, actual);
     }
 
-
     @Test
-    public void shouldTransliteradteSimvastatin() {
+    public void shouldTransliteradteSimvastatinEngToRus() {
         String expected = "симвастатин";
         String actual = transliterator.transliterate("simvastatin");
 
@@ -95,7 +93,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteClopidogrel() {
+    public void shouldTransliteradteClopidogrelEngToRus() {
         String expected = "клопидогрель";
         String actual = transliterator.transliterate("clopidogrel");
 
@@ -103,34 +101,31 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteMontelukast() {
+    public void shouldTransliteradteMontelukastEngToRus() {
         String expected = "монтелукаст";
         String actual = transliterator.transliterate("montelukast");
 
         Assert.assertEquals(expected, actual);
     }
 
-
     @Test
-    public void shouldTransliteradteRosuvastatin() {
+    public void shouldTransliteradteRosuvastatinEngToRus() {
         String expected = "розувастатин";
         String actual = transliterator.transliterate("rosuvastatin");
 
         Assert.assertEquals(expected, actual);
     }
 
-
     @Test
-    public void shouldTransliteradteEscitalopram() {
+    public void shouldTransliteradteEscitalopramEngToRus() {
         String expected = "эсциталопрам";
         String actual = transliterator.transliterate("escitalopram");
 
         Assert.assertEquals(expected, actual);
     }
 
-
     @Test
-    public void shouldTransliteradteAzithromycin() {
+    public void shouldTransliteradteAzithromycinEngToRus() {
         String expected = "азитромицин";
         String actual = transliterator.transliterate("azithromycin");
 
@@ -138,7 +133,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteAlbuterol() {
+    public void shouldTransliteradteAlbuterolEngToRus() {
         String expected = "альбутерол";
         String actual = transliterator.transliterate("albuterol");
 
@@ -146,16 +141,15 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteHydrochlorothiazide() {
+    public void shouldTransliteradteHydrochlorothiazideEngToRus() {
         String expected = "гидрохлоротиазид";
         String actual = transliterator.transliterate("hydrochlorothiazide");
 
         Assert.assertEquals(expected, actual);
     }
 
-
     @Test
-    public void shouldTransliteradteIbuprofen() {
+    public void shouldTransliteradteIbuprofenEngToRus() {
         String expected = "ибупрофен";
         String actual = transliterator.transliterate("ibuprofen");
 
@@ -163,7 +157,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteZolpidem() {
+    public void shouldTransliteradteZolpidemEngToRus() {
         String expected = "золпидем";
         String actual = transliterator.transliterate("zolpidem");
 
@@ -171,7 +165,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteValsartan() {
+    public void shouldTransliteradteValsartanEngToRus() {
         String expected = "валсартан";
         String actual = transliterator.transliterate("valsartan");
 
@@ -179,7 +173,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteDuloxetine() {
+    public void shouldTransliteradteDuloxetineEngToRus() {
         String expected = "дулоксетин";
         String actual = transliterator.transliterate("duloxetine");
 
@@ -187,7 +181,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteQuetiapine() {
+    public void shouldTransliteradteQuetiapineEngToRus() {
         String expected = "кветиапин";
         String actual = transliterator.transliterate("quetiapine");
 
@@ -195,7 +189,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradtePromethazine() {
+    public void shouldTransliteradtePromethazineEngToRus() {
         String expected = "прометазин";
         String actual = transliterator.transliterate("promethazine");
 
@@ -203,7 +197,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteToRusFluticasone() {
+    public void shouldTransliteradteToRusFluticasoneEngToRus() {
         String expected = "флутиказон";
         String actual = transliterator.transliterate("fluticasone");
 
@@ -211,7 +205,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteCephalexin() {
+    public void shouldTransliteradteCephalexinEngToRus() {
         String expected = "цефалексин";
         String actual = transliterator.transliterate("cephalexin");
 
@@ -220,7 +214,7 @@ public class EngToRusTransliteratorTest {
 
 
     @Test
-    public void shouldTransliteradtePotassium() {
+    public void shouldTransliteradtePotassiumEngToRus() {
         String expected = "потассиум";
         String actual = transliterator.transliterate("potassium");
 
@@ -228,7 +222,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteCyclobenzaprine() {
+    public void shouldTransliteradteCyclobenzaprineEngToRus() {
         String expected = "циклобензаприн";
         String actual = transliterator.transliterate("cyclobenzaprine");
 
@@ -236,7 +230,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteMethylprednisolone() {
+    public void shouldTransliteradteMethylprednisoloneEngToRus() {
         String expected = "метилпреднизолон";
         String actual = transliterator.transliterate("methylprednisolone");
 
@@ -244,7 +238,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteMethylphenidate() {
+    public void shouldTransliteradteMethylphenidateEngToRus() {
         String expected = "метилфенидат";
         String actual = transliterator.transliterate("methylphenidate");
 
@@ -252,7 +246,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteFexofenadine() {
+    public void shouldTransliteradteFexofenadineEngToRus() {
         String expected = "фексофенадин";
         String actual = transliterator.transliterate("fexofenadine");
 
@@ -261,7 +255,7 @@ public class EngToRusTransliteratorTest {
 
 
     @Test
-    public void shouldTransliteradteCarisoprodol() {
+    public void shouldTransliteradteCarisoprodolEngToRus() {
         String expected = "каризопродол";
         String actual = transliterator.transliterate("carisoprodol");
 
@@ -269,7 +263,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteradteLevetiracetam() {
+    public void shouldTransliteradteLevetiracetamEngToRus() {
         String expected = "леветирацетам";
         String actual = transliterator.transliterate("levetiracetam");
 
@@ -277,7 +271,7 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliteratePlasma() {
+    public void shouldTransliteratePlasmaEngToRus() {
         String expected = "плазма";
         String actual = transliterator.transliterate("plasma");
 
@@ -285,21 +279,11 @@ public class EngToRusTransliteratorTest {
     }
 
     @Test
-    public void shouldTransliterateAqua() {
+    public void shouldTransliterateAquaEngToRus() {
         String expected = "аква";
         String actual = transliterator.transliterate("aqua");
 
         Assert.assertEquals(expected, actual);
     }
 
-    //RUS
-
-    @Test
-    @Ignore
-    public void shouldTransliterateLipitorRus() {
-        String expected = "lipitor";
-        String actual = transliterator.transliterate("липитор");
-
-        Assert.assertEquals(expected, actual);
-    }
 }

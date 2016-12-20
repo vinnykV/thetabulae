@@ -2,6 +2,7 @@ package com.tabula.drugs.model;
 
 import com.tabula.drugs.dto.IdGroup;
 import com.tabula.drugs.dto.RxNormDataDto;
+import org.apache.commons.lang3.text.WordUtils;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -22,8 +23,8 @@ public class Drug {
 
     public Drug(IdGroup idGroup, String rusName) {
         this.rxnormId = idGroup.getRxnormId();
-        this.name = idGroup.getName();
-        this.rusName = rusName;
+        this.name = WordUtils.capitalize(idGroup.getName());
+        this.rusName = WordUtils.capitalize(rusName);
     }
 
     public String getRxnormId() {
@@ -39,7 +40,7 @@ public class Drug {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = WordUtils.capitalize(name);
     }
 
     public String getRusName() {
@@ -47,7 +48,7 @@ public class Drug {
     }
 
     public void setRusName(String rusName) {
-        this.rusName = rusName;
+        this.rusName = WordUtils.capitalize(rusName);
     }
 
     @Override

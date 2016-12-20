@@ -11,7 +11,7 @@ public class CharacterUtils {
     }
 
     public static Language evaluateCharacterLanguage(char character) {
-        if (String.valueOf(character).matches("^[A-Za-z ]+$")) {
+        if (Character.UnicodeBlock.of(character).equals(Character.UnicodeBlock.BASIC_LATIN)) {
             return Language.ENG;
         }
         if (Character.UnicodeBlock.of(character).equals(Character.UnicodeBlock.CYRILLIC)) {
@@ -19,5 +19,15 @@ public class CharacterUtils {
         }
 
         return Language.UNKNOWN;
+    }
+
+    public static boolean isRussian(String text) {
+        for (char character : text.toCharArray()) {
+            if (Language.RUS != evaluateCharacterLanguage(character)) {
+                return false;
+            }
+
+        }
+        return true;
     }
 }

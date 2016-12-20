@@ -30,7 +30,7 @@ public class ConvertingRulesManagerImpl implements ConvertingRulesManager {
         if (containerMap.containsKey(characterLanguage)) {
             return containerMap.get(characterLanguage);
         }
-
+        //TODO Proper Exception Handling
         throw new RuntimeException("Cant choose Rules Container for specified character");
     }
 }

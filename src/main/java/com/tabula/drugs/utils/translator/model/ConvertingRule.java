@@ -31,7 +31,7 @@ public class ConvertingRule implements Rule {
     @Override
     public String applyFunction(String input, Integer index) {
         if (function == null) {
-            return null;
+            return ConstantsContainer.Transliterator.FUNCTION_NOT_EXIST;
         }
         return (String) function.aply(input, index);
     }

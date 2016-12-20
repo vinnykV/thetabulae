@@ -19,7 +19,6 @@ public class RuleEvaluator {
 
         char[] subSequence = new char[characters.length - index];
         System.arraycopy(characters, index, subSequence, 0, characters.length - index);
-        CharSequence sequence = java.nio.CharBuffer.wrap(subSequence);
 
         for (ConvertingRule convertingRule : rule) {
             String ruleCharSequence = convertingRule.getCharSequence();
@@ -36,7 +35,8 @@ public class RuleEvaluator {
                 break;
             }
 
-            if ((String.valueOf(sequence).contains(ruleCharSequence))) {
+            if (characters.length >= (index + ruleCharSequence.length()) &&
+                    (String.valueOf(characters).substring(index, index + ruleCharSequence.length()).equals(ruleCharSequence))) {
                 result.append(convertingRule.getRusCharSequence());
                 mutableIndex.add(convertingRule.getCharSequence().length() - 1);
                 break;

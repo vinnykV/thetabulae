@@ -1,6 +1,7 @@
 package com.tabula.drugs.utils.translator.impl;
 
 import com.tabula.drugs.utils.ConstantsContainer;
+import com.tabula.drugs.utils.asserter.Assert;
 import com.tabula.drugs.utils.translator.RuleEvaluator;
 import com.tabula.drugs.utils.translator.api.Transliterator;
 import com.tabula.drugs.utils.translator.containers.api.ConvertingRulesManager;
@@ -23,8 +24,9 @@ public class EngToRusTransliterator implements Transliterator {
 
     @Override
     public String transliterate(String input) {
+        Assert.notNull(input);
         StringBuilder transliteratedInput = new StringBuilder();
-        char[] characters = input.toCharArray();
+        char[] characters = input.toLowerCase().toCharArray();
 
         MutableInt currentIndex;
 
