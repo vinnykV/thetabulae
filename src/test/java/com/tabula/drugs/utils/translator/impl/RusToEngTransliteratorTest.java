@@ -1,6 +1,8 @@
 package com.tabula.drugs.utils.translator.impl;
 
 import com.tabula.drugs.TabulaDrugRestApplication;
+import com.tabula.drugs.dto.InteractionDto;
+import com.tabula.drugs.service.api.InteractionCheckerService;
 import com.tabula.drugs.utils.translator.api.Transliterator;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,6 +12,10 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author Vladyslav_Vinnyk on 12/20/2016.
@@ -277,5 +283,18 @@ public class RusToEngTransliteratorTest {
 
         Assert.assertEquals(expected, actual);
     }
-    
+
+    @Autowired
+    private InteractionCheckerService interactionCheckerService;
+
+    @Test
+    public void tryIt() {
+        Set<String> set = new HashSet<>();
+        set.add("313820");
+        set.add("1100072");
+        List<InteractionDto> interactions = interactionCheckerService.getInteractions(set);
+
+        System.out.println("!! " + interactions);
+    }
+
 }

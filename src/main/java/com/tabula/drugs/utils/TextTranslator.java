@@ -8,11 +8,16 @@ import com.memetix.mst.translate.Translate;
  */
 public class TextTranslator {
 
-    public static String translate(String string) throws Exception {
+    public static String translate(String string) {
         Translate.setClientId("theTabulae");
         Translate.setClientSecret("6Im8QR9bd1Et+ADDNplKZiL+7jxRFXKrAN1NG0WdiKI=");
 
-        String translatedText = Translate.execute(string, Language.ENGLISH, Language.RUSSIAN);
+        String translatedText = null;
+        try {
+            translatedText = Translate.execute(string, Language.ENGLISH, Language.RUSSIAN);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         return translatedText;
     }
