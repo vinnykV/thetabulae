@@ -1,5 +1,6 @@
 package com.tabula.drugs.model.medicines.dosing;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,14 +15,19 @@ public class Forms {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "injectable", length = 256)
     private String injectable;
 
+    @Column(name = "powder_for_injections", length = 256)
     private String powderForInjections;
 
+    @Column(name = "oral_solution", length = 256)
     private String oralSolution;
 
+    @Column(name = "tablet", length = 256)
     private String tablet;
 
+    @Column(name = "tablet_delayed", length = 256)
     private String tabletDelayed;
 
     public Long getId() {

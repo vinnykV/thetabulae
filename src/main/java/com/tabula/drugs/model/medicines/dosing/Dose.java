@@ -1,7 +1,8 @@
 package com.tabula.drugs.model.medicines.dosing;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,17 +15,17 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Dose {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //TODO Replace to id or smth
-    private String diseaseName;
-
-    private String doseDiscription;
-
-    @ManyToOne(fetch= FetchType.LAZY)
-    @JoinColumn(name="usage_id")
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "usage_id")
     private Usage usage;
+
+    private Long diseaseId;
+
+    @Column(name = "dose_description", length = 1024)
+    private String doseDescription;
 
     public Long getId() {
         return id;
@@ -34,20 +35,28 @@ public class Dose {
         this.id = id;
     }
 
-    public String getDiseaseName() {
-        return diseaseName;
+    public Long getDiseaseId() {
+        return diseaseId;
     }
 
-    public void setDiseaseName(String diseaseName) {
-        this.diseaseName = diseaseName;
+    public void setDiseaseId(Long diseaseId) {
+        this.diseaseId = diseaseId;
     }
 
-    public String getDoseDiscription() {
-        return doseDiscription;
+    public String getDoseDescription() {
+        return doseDescription;
     }
 
-    public void setDoseDiscription(String doseDiscription) {
-        this.doseDiscription = doseDiscription;
+    public void setDoseDescription(String doseDescription) {
+        this.doseDescription = doseDescription;
+    }
+
+    public Usage getUsage() {
+        return usage;
+    }
+
+    public void setUsage(Usage usage) {
+        this.usage = usage;
     }
 
     @Override
@@ -58,16 +67,16 @@ public class Dose {
         Dose dose = (Dose) o;
 
         if (id != null ? !id.equals(dose.id) : dose.id != null) return false;
-        if (diseaseName != null ? !diseaseName.equals(dose.diseaseName) : dose.diseaseName != null) return false;
-        return doseDiscription != null ? doseDiscription.equals(dose.doseDiscription) : dose.doseDiscription == null;
+        if (diseaseId != null ? !diseaseId.equals(dose.diseaseId) : dose.diseaseId != null) return false;
+        return doseDescription != null ? doseDescription.equals(dose.doseDescription) : dose.doseDescription == null;
 
     }
 
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (diseaseName != null ? diseaseName.hashCode() : 0);
-        result = 31 * result + (doseDiscription != null ? doseDiscription.hashCode() : 0);
+        result = 31 * result + (diseaseId != null ? diseaseId.hashCode() : 0);
+        result = 31 * result + (doseDescription != null ? doseDescription.hashCode() : 0);
         return result;
     }
 
@@ -75,8 +84,8 @@ public class Dose {
     public String toString() {
         return "Doses{" +
                 "id=" + id +
-                ", diseaseName='" + diseaseName + '\'' +
-                ", doseDiscription='" + doseDiscription + '\'' +
+                ", diseaseId='" + diseaseId + '\'' +
+                ", doseDescription='" + doseDescription + '\'' +
                 '}';
     }
 }

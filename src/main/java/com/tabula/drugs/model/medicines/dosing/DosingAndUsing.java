@@ -1,9 +1,13 @@
 package com.tabula.drugs.model.medicines.dosing;
 
+import com.tabula.drugs.model.medicines.Medicine;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 /**
@@ -15,10 +19,15 @@ public class DosingAndUsing {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @OneToOne(mappedBy = "dosingAndUsing")
+    private Medicine medicine;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "adult_id")
     private Usage adult;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "pediatric_id")
     private Usage pediatric;
 
     public Long getId() {
