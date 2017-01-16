@@ -17,6 +17,7 @@ import com.tabula.drugs.repository.MedicineRepository;
 import liquibase.integration.spring.SpringLiquibase;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,6 +80,7 @@ public class RunTest {
     }
 
     @Test
+    @Ignore
     public void runIt() {
 //        System.out.println(medicine);
 //        System.out.println(medicine2);

@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 /**
- * Created by Vladyslav_Vinnyk on 12/25/2016.
+ * @author Vladyslav_Vinnyk on 12/25/2016.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = TabulaDrugRestApplication.class)

@@ -7,6 +7,8 @@ import com.tabula.drugs.utils.interactionApi.api.InteractionDBManagerServiceLoca
 import com.tabula.drugs.utils.rxNormApi.api.DBManager;
 import com.tabula.drugs.utils.rxNormApi.api.DBManagerService;
 import com.tabula.drugs.utils.rxNormApi.api.DBManagerServiceLocator;
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
@@ -32,6 +34,14 @@ public class ApplicationConfig {
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
     }
+
+    @Bean
+    public ModelMapper modelMapper() {
+        ModelMapper modelMapper = new ModelMapper();
+        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
+        return modelMapper;
+    }
+
 
     @Bean
     public InteractionDBManager getInteractionDBManager() {

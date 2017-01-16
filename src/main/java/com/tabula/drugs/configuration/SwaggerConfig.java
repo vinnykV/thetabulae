@@ -37,7 +37,7 @@ public class SwaggerConfig {
 
     private Predicate<String> paths() {
         return or(
-                regex("/drugs.*"),
+                regex("/medicine.*"),
                 regex("/interaction.*"));
     }
 }

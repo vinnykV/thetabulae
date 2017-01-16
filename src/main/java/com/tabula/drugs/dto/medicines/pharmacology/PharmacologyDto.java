@@ -1,39 +1,21 @@
-package com.tabula.drugs.model.medicines.pharmacology;
+package com.tabula.drugs.dto.medicines.pharmacology;
 
 import com.tabula.drugs.model.medicines.Medicine;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-
 /**
- * @author Vladyslav_Vinnyk on 12/21/2016.
+ * @author Vladyslav_Vinnyk on 12/26/2016.
  */
-@Entity
-public class Pharmacology {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PharmacologyDto {
     private Long id;
 
-    @OneToOne(mappedBy = "pharmacology")
-    private Medicine medicine;
-
-    @Column(name = "mechanism_of_action", length = 2054)
     private String mechanismOfAction;
 
-    @Column(name = "absorption", length = 2054)
     private String absorption;
 
-    @Column(name = "distribution", length = 2054)
     private String distribution;
 
-    @Column(name = "metabolism", length = 2054)
     private String metabolism;
 
-    @Column(name = "elimination", length = 2054)
     private String elimination;
 
     public Long getId() {
@@ -42,14 +24,6 @@ public class Pharmacology {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Medicine getMedicine() {
-        return medicine;
-    }
-
-    public void setMedicine(Medicine medicine) {
-        this.medicine = medicine;
     }
 
     public String getMechanismOfAction() {
@@ -97,10 +71,9 @@ public class Pharmacology {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Pharmacology that = (Pharmacology) o;
+        PharmacologyDto that = (PharmacologyDto) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (medicine != null ? !medicine.equals(that.medicine) : that.medicine != null) return false;
         if (mechanismOfAction != null ? !mechanismOfAction.equals(that.mechanismOfAction) : that.mechanismOfAction != null)
             return false;
         if (absorption != null ? !absorption.equals(that.absorption) : that.absorption != null) return false;
@@ -113,7 +86,6 @@ public class Pharmacology {
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (medicine != null ? medicine.hashCode() : 0);
         result = 31 * result + (mechanismOfAction != null ? mechanismOfAction.hashCode() : 0);
         result = 31 * result + (absorption != null ? absorption.hashCode() : 0);
         result = 31 * result + (distribution != null ? distribution.hashCode() : 0);
@@ -124,7 +96,7 @@ public class Pharmacology {
 
     @Override
     public String toString() {
-        return "Pharmacology{" +
+        return "PharmacologyDto{" +
                 "id=" + id +
                 ", mechanismOfAction='" + mechanismOfAction + '\'' +
                 ", absorption='" + absorption + '\'' +
