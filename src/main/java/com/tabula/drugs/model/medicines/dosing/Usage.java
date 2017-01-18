@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
  * @author Vladyslav_Vinnyk on 12/22/2016.
  */
 @Entity
-public class Usage {
+public class Usage implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -49,6 +50,9 @@ public class Usage {
     }
 
     public void setDoses(List<Dose> doses) {
+        for (Dose dose : doses) {
+            dose.setUsage(this);
+        }
         this.doses = doses;
     }
 
@@ -69,7 +73,6 @@ public class Usage {
         if (id != null ? !id.equals(usage.id) : usage.id != null) return false;
         if (forms != null ? !forms.equals(usage.forms) : usage.forms != null) return false;
         return doses != null ? doses.equals(usage.doses) : usage.doses == null;
-
     }
 
     @Override

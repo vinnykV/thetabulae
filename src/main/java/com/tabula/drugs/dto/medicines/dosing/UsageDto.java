@@ -1,5 +1,8 @@
 package com.tabula.drugs.dto.medicines.dosing;
 
+import com.tabula.drugs.model.medicines.dosing.Dose;
+import com.tabula.drugs.model.medicines.dosing.Usage;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +38,25 @@ public class UsageDto {
 
     public void setDoses(List<DoseDto> doses) {
         this.doses = doses;
+    }
+
+    public Usage convertToUsage() {
+        Usage usage = new Usage();
+        usage.setForms(forms.convertToForms());
+        List<Dose> doses = new ArrayList<>();
+
+        for (DoseDto doseDto : this.doses) {
+            Dose dose = new Dose();
+
+            dose.setId(doseDto.getId());
+            dose.setDiseaseName(doseDto.getDiseaseName());
+            dose.setDoseDescription(doseDto.getDoseDescription());
+
+            doses.add(dose);
+        }
+
+        usage.setDoses(doses);
+        return usage;
     }
 
     @Override

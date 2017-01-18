@@ -1,6 +1,7 @@
 package com.tabula.drugs.dto.medicines.pregnancy;
 
 import com.tabula.drugs.model.medicines.pregnancy.Category;
+import com.tabula.drugs.model.medicines.pregnancy.Pregnancy;
 
 /**
  * @author Vladyslav_Vinnyk on 12/26/2016.
@@ -34,6 +35,16 @@ public class PregnancyDto {
 
     public void setLactation(String lactation) {
         this.lactation = lactation;
+    }
+
+    public Pregnancy convertToPregnancy() {
+        Pregnancy pregnancy = new Pregnancy();
+
+        pregnancy.setId(id);
+        pregnancy.setCategory(category);
+        pregnancy.setLactation(lactation);
+
+        return pregnancy;
     }
 
     @Override

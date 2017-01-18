@@ -7,15 +7,8 @@ import com.tabula.drugs.model.medicines.pharmacology.Pharmacology;
 import com.tabula.drugs.model.medicines.pregnancy.Pregnancy;
 import com.tabula.drugs.utils.asserter.Assert;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,27 +16,27 @@ import java.util.List;
  * @author Vladyslav_Vinnyk on 12/21/2016.
  */
 @Entity
-public class Medicine {
+public class Medicine implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", length = 256)
+    @Column(name = "name", length = 256, nullable = false)
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "dosing_and_using_id")
+    @JoinColumn(name = "dosing_and_using_id", nullable = false)
     private DosingAndUsing dosingAndUsing;
 
     @OneToMany(mappedBy = "medicine", cascade = CascadeType.ALL)
     private List<AdverseEffects> adverseEffects = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "pregnancy_id")
+    @JoinColumn(name = "pregnancy_id", nullable = false)
     private Pregnancy pregnancy;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "pharmacology_id")
+    @JoinColumn(name = "pharmacology_id", nullable = false)
     private Pharmacology pharmacology;
 
 //    @OneToMany(cascade = CascadeType.ALL)
@@ -56,14 +49,6 @@ public class Medicine {
 
     public Long getId() {
         return id;
-    }
-
-    public Pregnancy getPregnancy() {
-        return pregnancy;
-    }
-
-    public void setPregnancy(Pregnancy pregnancy) {
-        this.pregnancy = pregnancy;
     }
 
     public void setId(Long id) {
@@ -82,17 +67,33 @@ public class Medicine {
         return dosingAndUsing;
     }
 
+    public void setDosingAndUsing(DosingAndUsing dosingAndUsing) {
+        dosingAndUsing.setMedicine(this);
+        this.dosingAndUsing = dosingAndUsing;
+    }
+
+    public Pregnancy getPregnancy() {
+        return pregnancy;
+    }
+
+    public void setPregnancy(Pregnancy pregnancy) {
+        if(this.getName() == null) {
+            this.setName("name2");
+        }
+        pregnancy.setMedicine(this);
+        this.pregnancy = pregnancy;
+    }
+
     public Pharmacology getPharmacology() {
         return pharmacology;
     }
 
     public void setPharmacology(Pharmacology pharmacology) {
+        pharmacology.setMedicine(this);
         this.pharmacology = pharmacology;
     }
 
-    public void setDosingAndUsing(DosingAndUsing dosingAndUsing) {
-        this.dosingAndUsing = dosingAndUsing;
-    }
+
 //
 //    public List<Interaction> getInteractions() {
 //        return interactions;

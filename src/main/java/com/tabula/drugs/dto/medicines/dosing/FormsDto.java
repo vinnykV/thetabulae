@@ -1,5 +1,7 @@
 package com.tabula.drugs.dto.medicines.dosing;
 
+import com.tabula.drugs.model.medicines.dosing.Forms;
+
 import javax.persistence.Column;
 
 /**
@@ -64,6 +66,19 @@ public class FormsDto {
 
     public void setTabletDelayed(String tabletDelayed) {
         this.tabletDelayed = tabletDelayed;
+    }
+
+    public Forms convertToForms() {
+        Forms forms = new Forms();
+
+        forms.setId(id);
+        forms.setTablet(tablet);
+        forms.setInjectable(injectable);
+        forms.setOralSolution(oralSolution);
+        forms.setPowderForInjections(powderForInjections);
+        forms.setTabletDelayed(tabletDelayed);
+
+        return forms;
     }
 
     @Override

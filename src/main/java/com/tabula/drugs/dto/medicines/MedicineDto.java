@@ -4,6 +4,8 @@ import com.tabula.drugs.dto.medicines.adverseeffect.AdverseEffectsDto;
 import com.tabula.drugs.dto.medicines.dosing.DosingAndUsingDto;
 import com.tabula.drugs.dto.medicines.pharmacology.PharmacologyDto;
 import com.tabula.drugs.dto.medicines.pregnancy.PregnancyDto;
+import com.tabula.drugs.model.medicines.Medicine;
+import com.tabula.drugs.model.medicines.adverseEffects.AdverseEffects;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,6 +72,25 @@ public class MedicineDto {
 
     public void setPharmacology(PharmacologyDto pharmacology) {
         this.pharmacology = pharmacology;
+    }
+
+    public Medicine convertToMedicine() {
+        Medicine medicine = new Medicine();
+
+        medicine.setId(id);
+        medicine.setName(name);
+        medicine.setPregnancy(pregnancy.convertToPregnancy());
+        List<AdverseEffects> adverseEffects = new ArrayList<>();
+
+        for (AdverseEffectsDto adverseEffectsDto : this.adverseEffects) {
+            adverseEffects.add(adverseEffectsDto.convertToAdverseEffects());
+        }
+
+        medicine.setAdverseEffects(adverseEffects);
+        medicine.setDosingAndUsing(dosingAndUsing.convertDosingAndUsing());
+        medicine.setPharmacology(pharmacology.convertToPharmacology());
+
+        return medicine;
     }
 
     @Override

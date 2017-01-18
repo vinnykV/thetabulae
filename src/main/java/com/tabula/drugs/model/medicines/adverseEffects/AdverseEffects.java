@@ -13,12 +13,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import java.io.Serializable;
 
 /**
  * @author Vladyslav_Vinnyk on 12/21/2016.
  */
 @Entity
-public class AdverseEffects {
+public class AdverseEffects implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -73,16 +74,13 @@ public class AdverseEffects {
         AdverseEffects that = (AdverseEffects) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (medicine != null ? !medicine.equals(that.medicine) : that.medicine != null) return false;
         if (frequency != that.frequency) return false;
         return description != null ? description.equals(that.description) : that.description == null;
-
     }
 
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (medicine != null ? medicine.hashCode() : 0);
         result = 31 * result + (frequency != null ? frequency.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
@@ -92,7 +90,6 @@ public class AdverseEffects {
     public String toString() {
         return "AdverseEffects{" +
                 "id=" + id +
-                ", medicine=" + medicine.getName() +
                 ", frequency=" + frequency +
                 ", description='" + description + '\'' +
                 '}';

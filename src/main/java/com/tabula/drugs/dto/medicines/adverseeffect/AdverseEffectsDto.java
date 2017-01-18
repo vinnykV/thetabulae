@@ -1,5 +1,6 @@
 package com.tabula.drugs.dto.medicines.adverseeffect;
 
+import com.tabula.drugs.model.medicines.adverseEffects.AdverseEffects;
 import com.tabula.drugs.model.medicines.adverseEffects.Frequency;
 
 /**
@@ -34,6 +35,16 @@ public class AdverseEffectsDto {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public AdverseEffects convertToAdverseEffects() {
+        AdverseEffects adverseEffects = new AdverseEffects();
+
+        adverseEffects.setId(id);
+        adverseEffects.setDescription(description);
+        adverseEffects.setFrequency(frequency);
+
+        return adverseEffects;
     }
 
     @Override

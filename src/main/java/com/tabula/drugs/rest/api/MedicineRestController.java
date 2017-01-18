@@ -8,11 +8,15 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.servlet.ModelAndView;
 
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
@@ -40,6 +44,11 @@ public interface MedicineRestController {
             notes = "Reutrns saved Medicine2")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "Successful2"),
             @ApiResponse(code = 500, message = "Internal server error2")})
+
     @RequestMapping(value = "/2", method = RequestMethod.POST, produces = APPLICATION_JSON_VALUE)
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     ResponseEntity<MedicineDto> saveMedicine(@RequestBody TryDto tryDto);
+
+    @ExceptionHandler(Exception.class)
+    public ModelAndView handleCustomException(Exception ex);
 }

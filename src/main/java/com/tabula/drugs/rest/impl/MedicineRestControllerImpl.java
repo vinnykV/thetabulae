@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Vladyslav_Vinnyk on 12/26/2016.
@@ -38,7 +39,7 @@ public class MedicineRestControllerImpl implements MedicineRestController {
 
     @CrossOrigin(methods = RequestMethod.POST)
     @Override
-    public ResponseEntity<MedicineDto> saveMedicine(@PathVariable MedicineDto medicineDto) {
+    public ResponseEntity<MedicineDto> saveMedicine(@RequestBody MedicineDto medicineDto) {
         Medicine medicine = dtoMapper.convertToEntity(medicineDto);
         medicineService.saveMedicine(medicine);
 
@@ -49,9 +50,32 @@ public class MedicineRestControllerImpl implements MedicineRestController {
     @CrossOrigin(methods = RequestMethod.POST)
     @Override
     public ResponseEntity<MedicineDto> saveMedicine(@RequestBody TryDto tryDto) {
-        System.out.println(tryDto);
-
         return new ResponseEntity<>(new MedicineDto(), HttpStatus.OK);
     }
 
+    @Override
+    public ModelAndView handleCustomException(Exception ex) {
+        ModelAndView model = new ModelAndView("error/generic_error");
+        ex.printStackTrace();
+        model.addObject("errCode", ex.getStackTrace());
+        model.addObject("errMsg", ex.getMessage());
+
+        return model;
+    }
+
+    public MedicineService getMedicineService() {
+        return medicineService;
+    }
+
+    public void setMedicineService(MedicineService medicineService) {
+        this.medicineService = medicineService;
+    }
+
+    public DtoMapper getDtoMapper() {
+        return dtoMapper;
+    }
+
+    public void setDtoMapper(DtoMapper dtoMapper) {
+        this.dtoMapper = dtoMapper;
+    }
 }

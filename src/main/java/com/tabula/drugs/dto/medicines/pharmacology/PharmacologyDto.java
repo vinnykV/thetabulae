@@ -1,6 +1,7 @@
 package com.tabula.drugs.dto.medicines.pharmacology;
 
 import com.tabula.drugs.model.medicines.Medicine;
+import com.tabula.drugs.model.medicines.pharmacology.Pharmacology;
 
 /**
  * @author Vladyslav_Vinnyk on 12/26/2016.
@@ -64,6 +65,19 @@ public class PharmacologyDto {
 
     public void setElimination(String elimination) {
         this.elimination = elimination;
+    }
+
+    public Pharmacology convertToPharmacology() {
+        Pharmacology pharmacology = new Pharmacology();
+
+        pharmacology.setId(id);
+        pharmacology.setAbsorption(absorption);
+        pharmacology.setDistribution(distribution);
+        pharmacology.setElimination(elimination);
+        pharmacology.setMechanismOfAction(mechanismOfAction);
+        pharmacology.setMetabolism(metabolism);
+
+        return pharmacology;
     }
 
     @Override

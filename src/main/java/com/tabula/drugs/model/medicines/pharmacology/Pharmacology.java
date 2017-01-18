@@ -2,23 +2,19 @@ package com.tabula.drugs.model.medicines.pharmacology;
 
 import com.tabula.drugs.model.medicines.Medicine;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author Vladyslav_Vinnyk on 12/21/2016.
  */
 @Entity
-public class Pharmacology {
+public class Pharmacology implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(mappedBy = "pharmacology")
+    @OneToOne(mappedBy = "pharmacology", cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.REMOVE})
     private Medicine medicine;
 
     @Column(name = "mechanism_of_action", length = 2054)
@@ -100,20 +96,17 @@ public class Pharmacology {
         Pharmacology that = (Pharmacology) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (medicine != null ? !medicine.equals(that.medicine) : that.medicine != null) return false;
         if (mechanismOfAction != null ? !mechanismOfAction.equals(that.mechanismOfAction) : that.mechanismOfAction != null)
             return false;
         if (absorption != null ? !absorption.equals(that.absorption) : that.absorption != null) return false;
         if (distribution != null ? !distribution.equals(that.distribution) : that.distribution != null) return false;
         if (metabolism != null ? !metabolism.equals(that.metabolism) : that.metabolism != null) return false;
         return elimination != null ? elimination.equals(that.elimination) : that.elimination == null;
-
     }
 
     @Override
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (medicine != null ? medicine.hashCode() : 0);
         result = 31 * result + (mechanismOfAction != null ? mechanismOfAction.hashCode() : 0);
         result = 31 * result + (absorption != null ? absorption.hashCode() : 0);
         result = 31 * result + (distribution != null ? distribution.hashCode() : 0);

@@ -8,6 +8,7 @@ import javax.persistence.Id;
 
 /**
  * @author Vladyslav_Vinnyk on 12/21/2016.
+ * Created by Vladyslav_Vinnyk on 1/16/2017.
  */
 @Entity
 public class Disease {

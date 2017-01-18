@@ -1,17 +1,6 @@
 databaseChangeLog() {
-    changeSet(id: 'change-set-tabulae-1', author: 'vladyslav_vinnyk') {
+    changeSet(id: 'change-set-tabulae-2', author: 'vladyslav_vinnyk') {
 
-        createTable(tableName: "disease") {
-            column(name: "id", type: "BIGINT", autoIncrement: true) {
-                constraints(primaryKey: "true")
-            }
-            column(name: "name", type: "VARCHAR") {
-                constraints(nullable: "false")
-            }
-            column(name: "description", type: "VARCHAR") {
-                constraints(nullable: "true")
-            }
-        }
         createTable(tableName: "forms") {
             column(name: "id", type: "BIGINT", autoIncrement: true) {
                 constraints(primaryKey: "true")
@@ -54,10 +43,6 @@ databaseChangeLog() {
             column(name: "usage_id", type: "BIGINT") {
                 constraints(nullable: "false")
                 constraints(foreignKeyName: 'usage_id', references: 'usage')
-            }
-            column(name: "disease_id", type: "BIGINT") {
-                constraints(nullable: "false")
-                constraints(foreignKeyName: 'disease_id', references: 'disease')
             }
         }
         createTable(tableName: "dosing_and_using") {

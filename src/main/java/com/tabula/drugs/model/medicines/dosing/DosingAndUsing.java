@@ -19,7 +19,7 @@ public class DosingAndUsing {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne(mappedBy = "dosingAndUsing")
+    @OneToOne(mappedBy = "dosingAndUsing", cascade = CascadeType.ALL)
     private Medicine medicine;
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -54,6 +54,14 @@ public class DosingAndUsing {
         this.pediatric = pediatric;
     }
 
+    public Medicine getMedicine() {
+        return medicine;
+    }
+
+    public void setMedicine(Medicine medicine) {
+        this.medicine = medicine;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -64,7 +72,6 @@ public class DosingAndUsing {
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (adult != null ? !adult.equals(that.adult) : that.adult != null) return false;
         return pediatric != null ? pediatric.equals(that.pediatric) : that.pediatric == null;
-
     }
 
     @Override

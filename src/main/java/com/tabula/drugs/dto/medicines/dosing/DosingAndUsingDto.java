@@ -1,5 +1,7 @@
 package com.tabula.drugs.dto.medicines.dosing;
 
+import com.tabula.drugs.model.medicines.dosing.DosingAndUsing;
+
 /**
  * @author Vladyslav_Vinnyk on 12/26/2016.
  */
@@ -32,6 +34,16 @@ public class DosingAndUsingDto {
 
     public void setPediatric(UsageDto pediatric) {
         this.pediatric = pediatric;
+    }
+
+    public DosingAndUsing convertDosingAndUsing() {
+        DosingAndUsing dosingAndUsing = new DosingAndUsing();
+
+        dosingAndUsing.setId(id);
+        dosingAndUsing.setAdult(adult.convertToUsage());
+        dosingAndUsing.setPediatric(pediatric.convertToUsage());
+
+        return dosingAndUsing;
     }
 
     @Override

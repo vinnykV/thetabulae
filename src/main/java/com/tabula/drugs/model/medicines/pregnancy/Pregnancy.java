@@ -2,20 +2,14 @@ package com.tabula.drugs.model.medicines.pregnancy;
 
 import com.tabula.drugs.model.medicines.Medicine;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * @author Vladyslav_Vinnyk on 12/21/2016.
  */
 @Entity
-public class Pregnancy {
+public class Pregnancy implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,7 +20,7 @@ public class Pregnancy {
     @Column(name = "lactation", length = 1024)
     private String lactation;
 
-    @OneToOne(mappedBy = "pregnancy")
+    @OneToOne(cascade = {CascadeType.ALL}, mappedBy = "pregnancy")
     private Medicine medicine;
 
     public Long getId() {
@@ -51,6 +45,14 @@ public class Pregnancy {
 
     public void setLactation(String lactation) {
         this.lactation = lactation;
+    }
+
+    public Medicine getMedicine() {
+        return medicine;
+    }
+
+    public void setMedicine(Medicine medicine) {
+        this.medicine = medicine;
     }
 
     @Override
