@@ -28,7 +28,6 @@ public class MedicineRestControllerImpl implements MedicineRestController {
     @Autowired
     private DtoMapper dtoMapper;
 
-    @CrossOrigin
     @Override
     public ResponseEntity<MedicineDto> getMedicine(@PathVariable Long id) {
         Medicine medicine = medicineService.getMedicine(id);
@@ -37,7 +36,6 @@ public class MedicineRestControllerImpl implements MedicineRestController {
         return new ResponseEntity<>(medicineDto, HttpStatus.OK);
     }
 
-    @CrossOrigin(methods = RequestMethod.POST)
     @Override
     public ResponseEntity<MedicineDto> saveMedicine(@RequestBody MedicineDto medicineDto) {
         Medicine medicine = dtoMapper.convertToEntity(medicineDto);
@@ -46,8 +44,6 @@ public class MedicineRestControllerImpl implements MedicineRestController {
         return new ResponseEntity<>(new MedicineDto(), HttpStatus.OK);
     }
 
-
-    @CrossOrigin(methods = RequestMethod.POST)
     @Override
     public ResponseEntity<MedicineDto> saveMedicine(@RequestBody TryDto tryDto) {
         return new ResponseEntity<>(new MedicineDto(), HttpStatus.OK);

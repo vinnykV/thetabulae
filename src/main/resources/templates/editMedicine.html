@@ -1,0 +1,384 @@
+<!DOCTYPE HTML>
+<!--
+Halcyonic by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org " ng-app="createMedicine">
+<head>
+    <title>The Tabulae</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="assets/js/angular/httpPostController.js"></script>
+</head>
+<body class="subpage">
+<div ng-controller="createMedicine" id="page-wrapper">
+    <!-- Header -->
+    <div id="header-wrapper">
+        <header id="header" class="container">
+            <div class="row">
+                <div class="12u">
+
+                    <!-- Logo -->
+                    <h1><a href="#" id="logo">Halcyonic</a></h1>
+
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <a href="index.html">Homepage</a>
+                        <a href="threecolumn.html">Three Column</a>
+                        <a href="twocolumn1.html">Two Column #1</a>
+                        <a href="medicine.html">Medicines</a>
+                        <a href="onecolumn.html">One Column</a>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Content -->
+    <div id="content-wrapper">
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="3u 12u(mobile)">
+                        <!-- Sidebar -->
+                        <section>
+                            <header>
+                                <h2>{{medicineName}}</h2>
+                            </header>
+                            <ul class="link-list">
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=true;menu.showAdverse = false; menu.pregnancy=false; menu.pharmacology=false; menu.patientInfo=false">Dosing
+                                        and Using</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=false;menu.showAdverse = true; menu.pregnancy=false; menu.pharmacology=false; menu.patientInfo=false">Adverse
+                                        Effects</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=false;menu.showAdverse = false; menu.pregnancy=true; menu.pharmacology=false; menu.patientInfo=false">Pregnancy</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=false;menu.showAdverse = false; menu.pregnancy=false; menu.pharmacology=true; menu.patientInfo=false">Pharmacology</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=false;menu.showAdverse = false; menu.pregnancy=false; menu.pharmacology=false; menu.patientInfo=true">Patient
+                                        Info</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <header>
+                                <h2>Ipsum Dolor</h2>
+                            </header>
+                            <p>
+                                Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
+                                iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat.
+                            </p>
+                            <ul class="link-list">
+                                <li>
+                                    <a href="#">Sed dolore viverra</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ligula non varius</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dis parturient montes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nascetur ridiculus</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="9u 12u(mobile) important(mobile)">
+
+                        <!-- Main Content -->
+                        <header>
+                            <h2>Create Medicine</h2>
+                            <h3>Another generic two column layout</h3>
+                        </header>
+                        <p>
+                            Name:
+                            <input ng-model="medicineName"/>
+                        </p>
+                        <div class="adultDoses">
+                            <h3>Dosing And Using:</h3>
+                            <h2><b>Adult</b></h2>
+                            <div ng-repeat="adultDosestextArea in adultDosestextAreas">
+                                <label>Disease: </label>
+                                <textarea ng-model="adultDoses.diseaseName"></textarea>
+                                <label>Dose Description:</label>
+                                <textarea ng-model="adultDoses.doseDescription"></textarea>
+                                <button ng-click="addDose(adultDoses, 'adult')">
+                                    Save Dose
+                                </button>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-info" ng-click="addMoreAdultDoses()">
+                                    Add Dose Form
+                                </button>
+                            </div>
+                            <div>
+                                <button class="btn btn-danger" ng-click="deleteLastAdultDoses()">
+                                    Delete Dose Form
+                                </button>
+                            </div>
+                        </div>
+                        <div class="adultFormes">
+                            <h3>Forms</h3>
+                            <p>
+                                <label>Injectable</label>
+                                <textarea ng-model="inputdosingAndUsing.adult.forms.injectable"></textarea>
+                            </p>
+                            <p>
+                                <label>OralSolution</label>
+                                <textarea ng-model="inputdosingAndUsing.adult.forms.oralSolution"></textarea>
+                            </p>
+                            <p>
+                                <label>Powder For Injections</label>
+                                <textarea ng-model="inputdosingAndUsing.adult.forms.powderForInjections"></textarea>
+                            </p>
+                            <p>
+                                <label>Tablet</label>
+                                <textarea ng-model="inputdosingAndUsing.adult.forms.tablet"></textarea>
+                            </p>
+                            <p>
+                                <label>Tablet Delayed</label>
+                                <textarea ng-model="inputdosingAndUsing.adult.forms.tabletDelayed"></textarea>
+                            </p>
+                        </div>
+                        <div class="pediatricDoses">
+                            <h2><b>Pediatric</b></h2>
+                            <div ng-repeat="pediatricDosestextArea in pediatricDosestextAreas">
+                                <label>Disease: </label>
+                                <textarea ng-model="pediatricDose.diseaseName"></textarea>
+                                <label>Dose Description:</label>
+                                <textarea ng-model="pediatricDose.doseDescription"></textarea>
+                                <button ng-click="addDose(pediatricDose, 'pediatric')">
+                                    Save Dose
+                                </button>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-info" ng-click="addMorePediatricDoses()">
+                                    Add Dose
+                                </button>
+                            </div>
+                            <div>
+                                <button class="btn btn-danger" ng-click="deleteLastPediatricDoses()">
+                                    Delete Dose
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pediatricFormes">
+                            <h3>Forms</h3>
+                            <p>
+                                <label>Injectable</label>
+                                <textarea ng-model="inputdosingAndUsing.pediatric.forms.injectable"></textarea>
+                            </p>
+                            <p>
+                                <label>OralSolution</label>
+                                <textarea ng-model="inputdosingAndUsing.pediatric.forms.oralSolution"></textarea>
+                            </p>
+                            <p>
+                                <label>Powder For Injections</label>
+                                <textarea
+                                        ng-model="inputdosingAndUsing.pediatric.forms.powderForInjections"></textarea>
+                            </p>
+                            <p>
+                                <label>Tablet</label>
+                                <textarea ng-model="inputdosingAndUsing.pediatric.forms.tablet"></textarea>
+                            </p>
+                            <p>
+                                <label>Tablet Delayed</label>
+                                <textarea ng-model="inputdosingAndUsing.pediatric.forms.tabletDelayed"></textarea>
+                            </p>
+                        </div>
+                        <div class="adverseEffects">
+                            <h3>Adverse Effects:</h3>
+                            <ul>
+                                <li ng-repeat="x in frequency">
+                                    <label>{{adverse.frequency = x | convertFrequencyEnum}}</label>
+                                    <textarea ng-model="adverse.description"
+                                              ng-blur="addAdverse(adverse)"></textarea>
+                                </li>
+                            </ul>
+                            <h3>Pharmacology:</h3>
+                            <p>
+                                <label>Mechanism Of Action</label>
+                                <textarea ng-model="inputPharmacology.mechanismOfAction"></textarea>
+                            </p>
+                            <p>
+                                <label>Absorption</label>
+                                <textarea ng-model="inputPharmacology.absorption"></textarea>
+                            </p>
+                            <p>
+                                <label>Distribution</label>
+                                <textarea ng-model="inputPharmacology.distribution"></textarea>
+                            </p>
+                            <p>
+                                <label>Elimination</label>
+                                <textarea ng-model="inputPharmacology.elimination"></textarea>
+                            </p>
+                            <p>
+                                <label>Metabolism</label>
+                                <textarea ng-model="inputPharmacology.metabolism"></textarea>
+                            </p>
+                            <h3>Pregnancy:</h3>
+                            <p>
+                                <label>Category</label>
+                                <select ng-model="locInputPregnancy.category"
+                                        ng-options="category as category for category in categories"
+                                        ng-init="locInputPregnancy.category=categories[categories.length - 1]"></select>
+                            </p>
+                            <p>
+                                <label>Lactation</label>
+                                <textarea ng-model="locInputPregnancy.lactation"
+                                          ng-blur="addPregnancy(locInputPregnancy)"></textarea>
+                            </p>
+                        </div>
+                        <p class="tpbutton btn-toolbar" style="text-align:center">
+                            <button type="button" ng-click="isAdultDosing = true; SendData()"
+                                    class="btn btn-success">
+                                Save
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div id="footer-wrapper">
+    <footer id="footer" class="container">
+        <div class="row">
+            <div class="8u 12u(mobile)">
+
+                <!-- Links -->
+                <section>
+                    <h2>Links to Important Stuff</h2>
+                    <div>
+                        <div class="row">
+                            <div class="3u 12u(mobile)">
+                                <ul class="link-list last-child">
+                                    <li>
+                                        <a href="#">Neque amet dapibus</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sed mattis quis rutrum</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Accumsan suspendisse</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Eu varius vitae magna</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="3u 12u(mobile)">
+                                <ul class="link-list last-child">
+                                    <li>
+                                        <a href="#">Neque amet dapibus</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sed mattis quis rutrum</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Accumsan suspendisse</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Eu varius vitae magna</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="3u 12u(mobile)">
+                                <ul class="link-list last-child">
+                                    <li>
+                                        <a href="#">Neque amet dapibus</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sed mattis quis rutrum</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Accumsan suspendisse</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Eu varius vitae magna</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="3u 12u(mobile)">
+                                <ul class="link-list last-child">
+                                    <li>
+                                        <a href="#">Neque amet dapibus</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sed mattis quis rutrum</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Accumsan suspendisse</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Eu varius vitae magna</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <div class="4u 12u(mobile)">
+
+                <!-- Blurb -->
+                <section>
+                    <h2>An Informative Text Blurb</h2>
+                    <p>
+                        Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu
+                        varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi,
+                        dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh
+                        lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
+                    </p>
+                </section>
+
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Copyright -->
+<div id="copyright">
+    &copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+</div>
+</body>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/skel-viewport.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+</html>

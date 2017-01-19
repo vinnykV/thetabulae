@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<!--
+Halcyonic by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org " ng-app="medicine">
+<head>
+    <title>The Tabulae</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="assets/js/angular/controller.js"></script>
+</head>
+<body class="subpage">
+<div ng-controller="medicine" id="page-wrapper">
+    <!-- Header -->
+    <div id="header-wrapper">
+        <header id="header" class="container">
+            <div class="row">
+                <div class="12u">
+
+                    <!-- Logo -->
+                    <h1><a href="#" id="logo">Halcyonic</a></h1>
+
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <a href="index.html">Homepage</a>
+                        <a href="threecolumn.html">Three Column</a>
+                        <a href="twocolumn1.html">Two Column #1</a>
+                        <a href="medicine.html">Medicines</a>
+                        <a href="onecolumn.html">One Column</a>
+                    </nav>
+
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Content -->
+    <div id="content-wrapper">
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="3u 12u(mobile)">
+                        <!-- Sidebar -->
+                        <section>
+                            <header>
+                                <h2>{{medicine.name | capitalize}}</h2>
+                            </header>
+                            <ul class="link-list">
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=true;menu.showAdverse = false; menu.pregnancy=false; menu.pharmacology=false; menu.patientInfo=false">Dosing
+                                        and Using</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=false;menu.showAdverse = true; menu.pregnancy=false; menu.pharmacology=false; menu.patientInfo=false">Adverse
+                                        Effects</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=false;menu.showAdverse = false; menu.pregnancy=true; menu.pharmacology=false; menu.patientInfo=false">Pregnancy</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=false;menu.showAdverse = false; menu.pregnancy=false; menu.pharmacology=true; menu.patientInfo=false">Pharmacology</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                       ng-click="menu.dosingUsing=false;menu.showAdverse = false; menu.pregnancy=false; menu.pharmacology=false; menu.patientInfo=true">Patient
+                                        Info</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <header>
+                                <h2>Ipsum Dolor</h2>
+                            </header>
+                            <p>
+                                Vehicula fermentum ligula at pretium. Suspendisse semper iaculis eros, eu aliquam
+                                iaculis. Phasellus ultrices diam sit amet orci lacinia sed consequat.
+                            </p>
+                            <ul class="link-list">
+                                <li>
+                                    <a href="editMedicine.html">Edit Medicine</a>
+                                </li>
+                                <li>
+                                    <a href="#">Ligula non varius</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dis parturient montes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nascetur ridiculus</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="9u 12u(mobile) important(mobile)">
+
+                        <!-- Main Content -->
+                        <section>
+                            <header>
+                                <h1>{{medicine.name | capitalize}}</h1>
+                                <h3>Another generic two column layout</h3>
+                            </header>
+                            <div id="dosingUsing" ng-show="menu.dosingUsing">
+                                <p class="tpbutton btn-toolbar" style="text-align:center">
+                                    <button type="button" ng-click="isAdultDosing = true; switchDosingUsing()"
+                                            class="btn btn-success">
+                                        Adult
+                                    </button>
+                                    <button type="button" ng-click="isAdultDosing = false; switchDosingUsing()"
+                                            class="btn btn-info">
+                                        Pediatric
+                                    </button>
+                                </p>
+                                <p>
+                                <h2>Dosage Forms and Strengths</h2>
+                                <div ng-show="dosingUsing.forms.injectable != null">
+                                    <h3>Injectable</h3>
+                                    <h4>{{dosingUsing.forms.injectable}}</h4>
+                                </div>
+                                <div ng-show="dosingUsing.forms.powderForInjections != null">
+                                    <h3>Powder For Injections</h3>
+                                    <h4>{{dosingUsing.forms.powderForInjections}}</h4>
+                                </div>
+                                <div ng-show="dosingUsing.forms.oralSolution != null">
+                                    <h3>Oral Solution</h3>
+                                    <h4>{{dosingUsing.forms.oralSolution}}</h4>
+                                </div>
+                                <div ng-show="dosingUsing.forms.tablet != null">
+                                    <h3>Tablet</h3>
+                                    <h4>{{dosingUsing.forms.tablet}}</h4>
+                                </div>
+                                <div ng-show="dosingUsing.forms.tabletDelayed != null">
+                                    <h3>Tablet Delayed</h3>
+                                    <h4>{{dosingUsing.forms.tabletDelayed}}</h4>
+                                </div>
+                                </p>
+                                <p>
+                                <h2>Dosing:</h2>
+                                <div ng-repeat="dose in dosingUsing.doses">
+                                    <p>
+                                    <h3>{{dose.diseaseName}}</h3>
+                                    <h4>DoseDescription: {{dose.doseDescription}}</h4>
+                                    </p>
+                                </div>
+                                </p>
+                            </div>
+                            <div id="adverse" ng-show="menu.showAdverse">
+                                <div ng-repeat="adverseEffect in medicine.adverseEffects">
+                                    <p>
+                                    <h3>{{adverseEffect.frequency | convertFrequencyEnum}}</h3>
+                                    <h4>{{adverseEffect.description}}</h4>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div id="pregnancy" ng-show="menu.pregnancy">
+                                <p>
+                                <p>
+                                <h4>Pregnancy category: {{medicine.pregnancy.category}}</h4>
+                                <h4>Lactation: {{medicine.pregnancy.lactation}}</h4>
+                                </p>
+                                </p>
+                            </div>
+
+                            <div id="pharmacology" ng-show="menu.pharmacology">
+                                <p>
+                                <h2>Mechanism of Action</h2>
+                                <h4>{{medicine.pharmacology.mechanismOfAction}}</h4>
+                                <h2>Mechanism of Action</h2>
+                                <h4>{{medicine.pharmacology.absorption}}</h4>
+                                <h2>Distribution</h2>
+                                <h4>{{medicine.pharmacology.distribution}}</h4>
+                                <h2>Metabolism</h2>
+                                <h4>{{medicine.pharmacology.metabolism}}</h4>
+                                <h2>Elimination</h2>
+                                <h4>{{medicine.pharmacology.elimination}}</h4>
+                                </p>
+                            </div>
+
+                            <div id="patientInfo" ng-show="menu.patientInfo">
+                                <p>
+                                    Patient Info. Good Drug. Use caution etc.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-wrapper">
+        <footer id="footer" class="container">
+            <div class="row">
+                <div class="8u 12u(mobile)">
+
+                    <!-- Links -->
+                    <section>
+                        <h2>Links to Important Stuff</h2>
+                        <div>
+                            <div class="row">
+                                <div class="3u 12u(mobile)">
+                                    <ul class="link-list last-child">
+                                        <li>
+                                            <a href="#">Neque amet dapibus</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sed mattis quis rutrum</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Accumsan suspendisse</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Eu varius vitae magna</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="3u 12u(mobile)">
+                                    <ul class="link-list last-child">
+                                        <li>
+                                            <a href="#">Neque amet dapibus</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sed mattis quis rutrum</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Accumsan suspendisse</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Eu varius vitae magna</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="3u 12u(mobile)">
+                                    <ul class="link-list last-child">
+                                        <li>
+                                            <a href="#">Neque amet dapibus</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sed mattis quis rutrum</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Accumsan suspendisse</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Eu varius vitae magna</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="3u 12u(mobile)">
+                                    <ul class="link-list last-child">
+                                        <li>
+                                            <a href="#">Neque amet dapibus</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Sed mattis quis rutrum</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Accumsan suspendisse</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Eu varius vitae magna</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="4u 12u(mobile)">
+
+                    <!-- Blurb -->
+                    <section>
+                        <h2>An Informative Text Blurb</h2>
+                        <p>
+                            Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu
+                            varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi,
+                            dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh
+                            lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
+                        </p>
+                    </section>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        &copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/skel-viewport.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
