@@ -1,19 +1,19 @@
 var drugs = angular.module("readMedicine", ['medicineService']);
 
-drugs.controller("allMedicines", function($http, $scope) {
+drugs.controller("allMedicines", function($http, $scope, $rootScope) {
 
       	//Request of the medicine from REST.
-      	$http.get("http://localhost:8090/medicine/all").then(function(response) {
+      	$http.get("/medicine/" + "all").then(function(response) {
       		$scope.medicines = response.data;
       	});
       });
 
-drugs.controller("medicine", function($http, $scope) {
+drugs.controller("medicine", function($http, $scope, $rootScope) {
     $scope.$watch('medicineId', function () {
         $scope.var2 = $scope.medicineId;
 
         //Request of the medicine from REST.
-        $http.get("http://localhost:8090/medicine/" + $scope.var2).then(function(response) {
+        $http.get("/medicine/" + $scope.var2).then(function(response) {
         	$scope.medicine = response.data;
         	$scope.dosingUsing = $scope.medicine.dosingAndUsing.adult;
         });
