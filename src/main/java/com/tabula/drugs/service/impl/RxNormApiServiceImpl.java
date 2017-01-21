@@ -1,6 +1,5 @@
 package com.tabula.drugs.service.impl;
 
-import com.tabula.drugs.service.api.InteractionCheckerService;
 import com.tabula.drugs.service.api.RxNormApiService;
 import com.tabula.drugs.utils.interactionApi.api.InteractionDBManager;
 import com.tabula.drugs.utils.rxNormApi.api.DBManager;

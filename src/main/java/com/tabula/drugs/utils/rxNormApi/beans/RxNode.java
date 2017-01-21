@@ -1,6 +1,6 @@
 /**
  * RxNode.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
@@ -9,7 +9,7 @@ package com.tabula.drugs.utils.rxNormApi.beans;
 
 import java.util.Arrays;
 
-public class RxNode  implements java.io.Serializable {
+public class RxNode implements java.io.Serializable {
     private java.lang.String[] ATTR;
 
     private java.lang.String ID;
@@ -20,18 +20,18 @@ public class RxNode  implements java.io.Serializable {
     }
 
     public RxNode(
-           java.lang.String[] ATTR,
-           java.lang.String ID,
-           java.lang.String STR) {
-           this.ATTR = ATTR;
-           this.ID = ID;
-           this.STR = STR;
+            java.lang.String[] ATTR,
+            java.lang.String ID,
+            java.lang.String STR) {
+        this.ATTR = ATTR;
+        this.ID = ID;
+        this.STR = STR;
     }
 
 
     /**
      * Gets the ATTR value for this RxNode.
-     * 
+     *
      * @return ATTR
      */
     public java.lang.String[] getATTR() {
@@ -41,7 +41,7 @@ public class RxNode  implements java.io.Serializable {
 
     /**
      * Sets the ATTR value for this RxNode.
-     * 
+     *
      * @param ATTR
      */
     public void setATTR(java.lang.String[] ATTR) {
@@ -51,7 +51,7 @@ public class RxNode  implements java.io.Serializable {
 
     /**
      * Gets the ID value for this RxNode.
-     * 
+     *
      * @return ID
      */
     public java.lang.String getID() {
@@ -61,7 +61,7 @@ public class RxNode  implements java.io.Serializable {
 
     /**
      * Sets the ID value for this RxNode.
-     * 
+     *
      * @param ID
      */
     public void setID(java.lang.String ID) {
@@ -71,7 +71,7 @@ public class RxNode  implements java.io.Serializable {
 
     /**
      * Gets the STR value for this RxNode.
-     * 
+     *
      * @return STR
      */
     public java.lang.String getSTR() {
@@ -81,7 +81,7 @@ public class RxNode  implements java.io.Serializable {
 
     /**
      * Sets the STR value for this RxNode.
-     * 
+     *
      * @param STR
      */
     public void setSTR(java.lang.String STR) {
@@ -89,6 +89,7 @@ public class RxNode  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof RxNode)) return false;
         RxNode other = (RxNode) obj;
@@ -99,21 +100,22 @@ public class RxNode  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.ATTR==null && other.getATTR()==null) || 
-             (this.ATTR!=null &&
-              java.util.Arrays.equals(this.ATTR, other.getATTR()))) &&
-            ((this.ID==null && other.getID()==null) || 
-             (this.ID!=null &&
-              this.ID.equals(other.getID()))) &&
-            ((this.STR==null && other.getSTR()==null) || 
-             (this.STR!=null &&
-              this.STR.equals(other.getSTR())));
+        _equals = true &&
+                ((this.ATTR == null && other.getATTR() == null) ||
+                        (this.ATTR != null &&
+                                java.util.Arrays.equals(this.ATTR, other.getATTR()))) &&
+                ((this.ID == null && other.getID() == null) ||
+                        (this.ID != null &&
+                                this.ID.equals(other.getID()))) &&
+                ((this.STR == null && other.getSTR() == null) ||
+                        (this.STR != null &&
+                                this.STR.equals(other.getSTR())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -121,12 +123,12 @@ public class RxNode  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getATTR() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getATTR());
+            for (int i = 0;
+                 i < java.lang.reflect.Array.getLength(getATTR());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(getATTR(), i);
                 if (obj != null &&
-                    !obj.getClass().isArray()) {
+                        !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
                 }
             }
@@ -143,7 +145,7 @@ public class RxNode  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RxNode.class, true);
+            new org.apache.axis.description.TypeDesc(RxNode.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "RxNode"));
@@ -178,24 +180,24 @@ public class RxNode  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

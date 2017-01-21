@@ -1,6 +1,6 @@
 /**
  * FullInteractionType.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
@@ -9,7 +9,7 @@ package com.tabula.drugs.utils.interactionApi.beans;
 
 import java.util.Arrays;
 
-public class FullInteractionType  implements java.io.Serializable {
+public class FullInteractionType implements java.io.Serializable {
     private Comment comment;
 
     private java.lang.Object[] interactionPair;
@@ -20,18 +20,18 @@ public class FullInteractionType  implements java.io.Serializable {
     }
 
     public FullInteractionType(
-           Comment comment,
-           java.lang.Object[] interactionPair,
-           java.lang.Object[] minConcept) {
-           this.comment = comment;
-           this.interactionPair = interactionPair;
-           this.minConcept = minConcept;
+            Comment comment,
+            java.lang.Object[] interactionPair,
+            java.lang.Object[] minConcept) {
+        this.comment = comment;
+        this.interactionPair = interactionPair;
+        this.minConcept = minConcept;
     }
 
 
     /**
      * Gets the comment value for this FullInteractionType.
-     * 
+     *
      * @return comment
      */
     public Comment getComment() {
@@ -41,7 +41,7 @@ public class FullInteractionType  implements java.io.Serializable {
 
     /**
      * Sets the comment value for this FullInteractionType.
-     * 
+     *
      * @param comment
      */
     public void setComment(Comment comment) {
@@ -51,7 +51,7 @@ public class FullInteractionType  implements java.io.Serializable {
 
     /**
      * Gets the interactionPair value for this FullInteractionType.
-     * 
+     *
      * @return interactionPair
      */
     public java.lang.Object[] getInteractionPair() {
@@ -61,7 +61,7 @@ public class FullInteractionType  implements java.io.Serializable {
 
     /**
      * Sets the interactionPair value for this FullInteractionType.
-     * 
+     *
      * @param interactionPair
      */
     public void setInteractionPair(java.lang.Object[] interactionPair) {
@@ -71,7 +71,7 @@ public class FullInteractionType  implements java.io.Serializable {
 
     /**
      * Gets the minConcept value for this FullInteractionType.
-     * 
+     *
      * @return minConcept
      */
     public java.lang.Object[] getMinConcept() {
@@ -81,7 +81,7 @@ public class FullInteractionType  implements java.io.Serializable {
 
     /**
      * Sets the minConcept value for this FullInteractionType.
-     * 
+     *
      * @param minConcept
      */
     public void setMinConcept(java.lang.Object[] minConcept) {
@@ -89,6 +89,7 @@ public class FullInteractionType  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof FullInteractionType)) return false;
         FullInteractionType other = (FullInteractionType) obj;
@@ -99,21 +100,22 @@ public class FullInteractionType  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.comment==null && other.getComment()==null) || 
-             (this.comment!=null &&
-              this.comment.equals(other.getComment()))) &&
-            ((this.interactionPair==null && other.getInteractionPair()==null) || 
-             (this.interactionPair!=null &&
-              java.util.Arrays.equals(this.interactionPair, other.getInteractionPair()))) &&
-            ((this.minConcept==null && other.getMinConcept()==null) || 
-             (this.minConcept!=null &&
-              java.util.Arrays.equals(this.minConcept, other.getMinConcept())));
+        _equals = true &&
+                ((this.comment == null && other.getComment() == null) ||
+                        (this.comment != null &&
+                                this.comment.equals(other.getComment()))) &&
+                ((this.interactionPair == null && other.getInteractionPair() == null) ||
+                        (this.interactionPair != null &&
+                                java.util.Arrays.equals(this.interactionPair, other.getInteractionPair()))) &&
+                ((this.minConcept == null && other.getMinConcept() == null) ||
+                        (this.minConcept != null &&
+                                java.util.Arrays.equals(this.minConcept, other.getMinConcept())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -124,23 +126,23 @@ public class FullInteractionType  implements java.io.Serializable {
             _hashCode += getComment().hashCode();
         }
         if (getInteractionPair() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getInteractionPair());
+            for (int i = 0;
+                 i < java.lang.reflect.Array.getLength(getInteractionPair());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(getInteractionPair(), i);
                 if (obj != null &&
-                    !obj.getClass().isArray()) {
+                        !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
                 }
             }
         }
         if (getMinConcept() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getMinConcept());
+            for (int i = 0;
+                 i < java.lang.reflect.Array.getLength(getMinConcept());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(getMinConcept(), i);
                 if (obj != null &&
-                    !obj.getClass().isArray()) {
+                        !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
                 }
             }
@@ -151,7 +153,7 @@ public class FullInteractionType  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(FullInteractionType.class, true);
+            new org.apache.axis.description.TypeDesc(FullInteractionType.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "FullInteractionType"));
@@ -186,24 +188,24 @@ public class FullInteractionType  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

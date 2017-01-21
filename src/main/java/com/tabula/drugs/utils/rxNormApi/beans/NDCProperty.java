@@ -1,6 +1,6 @@
 /**
  * NDCProperty.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
@@ -9,7 +9,7 @@ package com.tabula.drugs.utils.rxNormApi.beans;
 
 import java.util.Arrays;
 
-public class NDCProperty  implements java.io.Serializable {
+public class NDCProperty implements java.io.Serializable {
     private java.lang.String ndc;
 
     private java.lang.String ndc10;
@@ -28,26 +28,26 @@ public class NDCProperty  implements java.io.Serializable {
     }
 
     public NDCProperty(
-           java.lang.String ndc,
-           java.lang.String ndc10,
-           java.lang.String ndc9,
-           java.lang.String[] packaging,
-           PropertyConcept[] properties,
-           java.lang.String rxcui,
-           java.lang.String splSetId) {
-           this.ndc = ndc;
-           this.ndc10 = ndc10;
-           this.ndc9 = ndc9;
-           this.packaging = packaging;
-           this.properties = properties;
-           this.rxcui = rxcui;
-           this.splSetId = splSetId;
+            java.lang.String ndc,
+            java.lang.String ndc10,
+            java.lang.String ndc9,
+            java.lang.String[] packaging,
+            PropertyConcept[] properties,
+            java.lang.String rxcui,
+            java.lang.String splSetId) {
+        this.ndc = ndc;
+        this.ndc10 = ndc10;
+        this.ndc9 = ndc9;
+        this.packaging = packaging;
+        this.properties = properties;
+        this.rxcui = rxcui;
+        this.splSetId = splSetId;
     }
 
 
     /**
      * Gets the ndc value for this NDCProperty.
-     * 
+     *
      * @return ndc
      */
     public java.lang.String getNdc() {
@@ -57,7 +57,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Sets the ndc value for this NDCProperty.
-     * 
+     *
      * @param ndc
      */
     public void setNdc(java.lang.String ndc) {
@@ -67,7 +67,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Gets the ndc10 value for this NDCProperty.
-     * 
+     *
      * @return ndc10
      */
     public java.lang.String getNdc10() {
@@ -77,7 +77,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Sets the ndc10 value for this NDCProperty.
-     * 
+     *
      * @param ndc10
      */
     public void setNdc10(java.lang.String ndc10) {
@@ -87,7 +87,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Gets the ndc9 value for this NDCProperty.
-     * 
+     *
      * @return ndc9
      */
     public java.lang.String getNdc9() {
@@ -97,7 +97,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Sets the ndc9 value for this NDCProperty.
-     * 
+     *
      * @param ndc9
      */
     public void setNdc9(java.lang.String ndc9) {
@@ -107,7 +107,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Gets the packaging value for this NDCProperty.
-     * 
+     *
      * @return packaging
      */
     public java.lang.String[] getPackaging() {
@@ -117,7 +117,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Sets the packaging value for this NDCProperty.
-     * 
+     *
      * @param packaging
      */
     public void setPackaging(java.lang.String[] packaging) {
@@ -127,7 +127,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Gets the properties value for this NDCProperty.
-     * 
+     *
      * @return properties
      */
     public PropertyConcept[] getProperties() {
@@ -137,7 +137,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Sets the properties value for this NDCProperty.
-     * 
+     *
      * @param properties
      */
     public void setProperties(PropertyConcept[] properties) {
@@ -147,7 +147,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Gets the rxcui value for this NDCProperty.
-     * 
+     *
      * @return rxcui
      */
     public java.lang.String getRxcui() {
@@ -157,7 +157,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Sets the rxcui value for this NDCProperty.
-     * 
+     *
      * @param rxcui
      */
     public void setRxcui(java.lang.String rxcui) {
@@ -167,7 +167,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Gets the splSetId value for this NDCProperty.
-     * 
+     *
      * @return splSetId
      */
     public java.lang.String getSplSetId() {
@@ -177,7 +177,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     /**
      * Sets the splSetId value for this NDCProperty.
-     * 
+     *
      * @param splSetId
      */
     public void setSplSetId(java.lang.String splSetId) {
@@ -185,6 +185,7 @@ public class NDCProperty  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof NDCProperty)) return false;
         NDCProperty other = (NDCProperty) obj;
@@ -195,33 +196,34 @@ public class NDCProperty  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.ndc==null && other.getNdc()==null) || 
-             (this.ndc!=null &&
-              this.ndc.equals(other.getNdc()))) &&
-            ((this.ndc10==null && other.getNdc10()==null) || 
-             (this.ndc10!=null &&
-              this.ndc10.equals(other.getNdc10()))) &&
-            ((this.ndc9==null && other.getNdc9()==null) || 
-             (this.ndc9!=null &&
-              this.ndc9.equals(other.getNdc9()))) &&
-            ((this.packaging==null && other.getPackaging()==null) || 
-             (this.packaging!=null &&
-              java.util.Arrays.equals(this.packaging, other.getPackaging()))) &&
-            ((this.properties==null && other.getProperties()==null) || 
-             (this.properties!=null &&
-              java.util.Arrays.equals(this.properties, other.getProperties()))) &&
-            ((this.rxcui==null && other.getRxcui()==null) || 
-             (this.rxcui!=null &&
-              this.rxcui.equals(other.getRxcui()))) &&
-            ((this.splSetId==null && other.getSplSetId()==null) || 
-             (this.splSetId!=null &&
-              this.splSetId.equals(other.getSplSetId())));
+        _equals = true &&
+                ((this.ndc == null && other.getNdc() == null) ||
+                        (this.ndc != null &&
+                                this.ndc.equals(other.getNdc()))) &&
+                ((this.ndc10 == null && other.getNdc10() == null) ||
+                        (this.ndc10 != null &&
+                                this.ndc10.equals(other.getNdc10()))) &&
+                ((this.ndc9 == null && other.getNdc9() == null) ||
+                        (this.ndc9 != null &&
+                                this.ndc9.equals(other.getNdc9()))) &&
+                ((this.packaging == null && other.getPackaging() == null) ||
+                        (this.packaging != null &&
+                                java.util.Arrays.equals(this.packaging, other.getPackaging()))) &&
+                ((this.properties == null && other.getProperties() == null) ||
+                        (this.properties != null &&
+                                java.util.Arrays.equals(this.properties, other.getProperties()))) &&
+                ((this.rxcui == null && other.getRxcui() == null) ||
+                        (this.rxcui != null &&
+                                this.rxcui.equals(other.getRxcui()))) &&
+                ((this.splSetId == null && other.getSplSetId() == null) ||
+                        (this.splSetId != null &&
+                                this.splSetId.equals(other.getSplSetId())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -238,23 +240,23 @@ public class NDCProperty  implements java.io.Serializable {
             _hashCode += getNdc9().hashCode();
         }
         if (getPackaging() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPackaging());
+            for (int i = 0;
+                 i < java.lang.reflect.Array.getLength(getPackaging());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(getPackaging(), i);
                 if (obj != null &&
-                    !obj.getClass().isArray()) {
+                        !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
                 }
             }
         }
         if (getProperties() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getProperties());
+            for (int i = 0;
+                 i < java.lang.reflect.Array.getLength(getProperties());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(getProperties(), i);
                 if (obj != null &&
-                    !obj.getClass().isArray()) {
+                        !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
                 }
             }
@@ -271,7 +273,7 @@ public class NDCProperty  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(NDCProperty.class, true);
+            new org.apache.axis.description.TypeDesc(NDCProperty.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "NDCProperty"));
@@ -330,24 +332,24 @@ public class NDCProperty  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

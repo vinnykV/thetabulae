@@ -1,13 +1,13 @@
 /**
  * RxMatchInfo.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.rxNormApi.beans;
 
-public class RxMatchInfo  implements java.io.Serializable {
+public class RxMatchInfo implements java.io.Serializable {
     private int RANK;
 
     private java.lang.String RXAUI;
@@ -20,20 +20,20 @@ public class RxMatchInfo  implements java.io.Serializable {
     }
 
     public RxMatchInfo(
-           int RANK,
-           java.lang.String RXAUI,
-           java.lang.String RXCUI,
-           int SCORE) {
-           this.RANK = RANK;
-           this.RXAUI = RXAUI;
-           this.RXCUI = RXCUI;
-           this.SCORE = SCORE;
+            int RANK,
+            java.lang.String RXAUI,
+            java.lang.String RXCUI,
+            int SCORE) {
+        this.RANK = RANK;
+        this.RXAUI = RXAUI;
+        this.RXCUI = RXCUI;
+        this.SCORE = SCORE;
     }
 
 
     /**
      * Gets the RANK value for this RxMatchInfo.
-     * 
+     *
      * @return RANK
      */
     public int getRANK() {
@@ -43,7 +43,7 @@ public class RxMatchInfo  implements java.io.Serializable {
 
     /**
      * Sets the RANK value for this RxMatchInfo.
-     * 
+     *
      * @param RANK
      */
     public void setRANK(int RANK) {
@@ -53,7 +53,7 @@ public class RxMatchInfo  implements java.io.Serializable {
 
     /**
      * Gets the RXAUI value for this RxMatchInfo.
-     * 
+     *
      * @return RXAUI
      */
     public java.lang.String getRXAUI() {
@@ -63,7 +63,7 @@ public class RxMatchInfo  implements java.io.Serializable {
 
     /**
      * Sets the RXAUI value for this RxMatchInfo.
-     * 
+     *
      * @param RXAUI
      */
     public void setRXAUI(java.lang.String RXAUI) {
@@ -73,7 +73,7 @@ public class RxMatchInfo  implements java.io.Serializable {
 
     /**
      * Gets the RXCUI value for this RxMatchInfo.
-     * 
+     *
      * @return RXCUI
      */
     public java.lang.String getRXCUI() {
@@ -83,7 +83,7 @@ public class RxMatchInfo  implements java.io.Serializable {
 
     /**
      * Sets the RXCUI value for this RxMatchInfo.
-     * 
+     *
      * @param RXCUI
      */
     public void setRXCUI(java.lang.String RXCUI) {
@@ -93,7 +93,7 @@ public class RxMatchInfo  implements java.io.Serializable {
 
     /**
      * Gets the SCORE value for this RxMatchInfo.
-     * 
+     *
      * @return SCORE
      */
     public int getSCORE() {
@@ -103,7 +103,7 @@ public class RxMatchInfo  implements java.io.Serializable {
 
     /**
      * Sets the SCORE value for this RxMatchInfo.
-     * 
+     *
      * @param SCORE
      */
     public void setSCORE(int SCORE) {
@@ -111,6 +111,7 @@ public class RxMatchInfo  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof RxMatchInfo)) return false;
         RxMatchInfo other = (RxMatchInfo) obj;
@@ -121,20 +122,21 @@ public class RxMatchInfo  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            this.RANK == other.getRANK() &&
-            ((this.RXAUI==null && other.getRXAUI()==null) || 
-             (this.RXAUI!=null &&
-              this.RXAUI.equals(other.getRXAUI()))) &&
-            ((this.RXCUI==null && other.getRXCUI()==null) || 
-             (this.RXCUI!=null &&
-              this.RXCUI.equals(other.getRXCUI()))) &&
-            this.SCORE == other.getSCORE();
+        _equals = true &&
+                this.RANK == other.getRANK() &&
+                ((this.RXAUI == null && other.getRXAUI() == null) ||
+                        (this.RXAUI != null &&
+                                this.RXAUI.equals(other.getRXAUI()))) &&
+                ((this.RXCUI == null && other.getRXCUI() == null) ||
+                        (this.RXCUI != null &&
+                                this.RXCUI.equals(other.getRXCUI()))) &&
+                this.SCORE == other.getSCORE();
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -155,7 +157,7 @@ public class RxMatchInfo  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RxMatchInfo.class, true);
+            new org.apache.axis.description.TypeDesc(RxMatchInfo.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "RxMatchInfo"));
@@ -196,24 +198,24 @@ public class RxMatchInfo  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

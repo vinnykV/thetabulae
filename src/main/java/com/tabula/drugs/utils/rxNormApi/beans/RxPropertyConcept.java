@@ -1,13 +1,13 @@
 /**
  * RxPropertyConcept.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.rxNormApi.beans;
 
-public class RxPropertyConcept  implements java.io.Serializable {
+public class RxPropertyConcept implements java.io.Serializable {
     private java.lang.String CATEGORY;
 
     private java.lang.String NAME;
@@ -18,18 +18,18 @@ public class RxPropertyConcept  implements java.io.Serializable {
     }
 
     public RxPropertyConcept(
-           java.lang.String CATEGORY,
-           java.lang.String NAME,
-           java.lang.String VALUE) {
-           this.CATEGORY = CATEGORY;
-           this.NAME = NAME;
-           this.VALUE = VALUE;
+            java.lang.String CATEGORY,
+            java.lang.String NAME,
+            java.lang.String VALUE) {
+        this.CATEGORY = CATEGORY;
+        this.NAME = NAME;
+        this.VALUE = VALUE;
     }
 
 
     /**
      * Gets the CATEGORY value for this RxPropertyConcept.
-     * 
+     *
      * @return CATEGORY
      */
     public java.lang.String getCATEGORY() {
@@ -39,7 +39,7 @@ public class RxPropertyConcept  implements java.io.Serializable {
 
     /**
      * Sets the CATEGORY value for this RxPropertyConcept.
-     * 
+     *
      * @param CATEGORY
      */
     public void setCATEGORY(java.lang.String CATEGORY) {
@@ -49,7 +49,7 @@ public class RxPropertyConcept  implements java.io.Serializable {
 
     /**
      * Gets the NAME value for this RxPropertyConcept.
-     * 
+     *
      * @return NAME
      */
     public java.lang.String getNAME() {
@@ -59,7 +59,7 @@ public class RxPropertyConcept  implements java.io.Serializable {
 
     /**
      * Sets the NAME value for this RxPropertyConcept.
-     * 
+     *
      * @param NAME
      */
     public void setNAME(java.lang.String NAME) {
@@ -69,7 +69,7 @@ public class RxPropertyConcept  implements java.io.Serializable {
 
     /**
      * Gets the VALUE value for this RxPropertyConcept.
-     * 
+     *
      * @return VALUE
      */
     public java.lang.String getVALUE() {
@@ -79,7 +79,7 @@ public class RxPropertyConcept  implements java.io.Serializable {
 
     /**
      * Sets the VALUE value for this RxPropertyConcept.
-     * 
+     *
      * @param VALUE
      */
     public void setVALUE(java.lang.String VALUE) {
@@ -87,6 +87,7 @@ public class RxPropertyConcept  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof RxPropertyConcept)) return false;
         RxPropertyConcept other = (RxPropertyConcept) obj;
@@ -97,21 +98,22 @@ public class RxPropertyConcept  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.CATEGORY==null && other.getCATEGORY()==null) || 
-             (this.CATEGORY!=null &&
-              this.CATEGORY.equals(other.getCATEGORY()))) &&
-            ((this.NAME==null && other.getNAME()==null) || 
-             (this.NAME!=null &&
-              this.NAME.equals(other.getNAME()))) &&
-            ((this.VALUE==null && other.getVALUE()==null) || 
-             (this.VALUE!=null &&
-              this.VALUE.equals(other.getVALUE())));
+        _equals = true &&
+                ((this.CATEGORY == null && other.getCATEGORY() == null) ||
+                        (this.CATEGORY != null &&
+                                this.CATEGORY.equals(other.getCATEGORY()))) &&
+                ((this.NAME == null && other.getNAME() == null) ||
+                        (this.NAME != null &&
+                                this.NAME.equals(other.getNAME()))) &&
+                ((this.VALUE == null && other.getVALUE() == null) ||
+                        (this.VALUE != null &&
+                                this.VALUE.equals(other.getVALUE())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -133,7 +135,7 @@ public class RxPropertyConcept  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RxPropertyConcept.class, true);
+            new org.apache.axis.description.TypeDesc(RxPropertyConcept.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "RxPropertyConcept"));
@@ -168,24 +170,24 @@ public class RxPropertyConcept  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

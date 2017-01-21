@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>The Tabulae - Login</title>
+    <link rel="stylesheet" href="assets/css/registrationStyle.css"/>
+</head>
+<body>
+<form id="signup" modelAttribute="userForm" method="post" th:action="@{/registration}" th:object="${userForm}">
+    <h1>Start doing cool stuff in seconds.</h1>
+    <input type="email" th:field="*{username}" placeholder="john.doe@email.com" required=""/>
+
+    <input type="password" th:field="*{password}" placeholder="Choose your password" required=""/>
+    <input type="password" th:field="*{passwordConfirm}" placeholder="Confirm password" required=""/>
+    <button type="submit">Sign up for free!</button>
+</form>
+</body>
+</html>

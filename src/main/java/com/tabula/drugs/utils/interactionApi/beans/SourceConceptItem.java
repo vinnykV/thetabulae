@@ -1,13 +1,13 @@
 /**
  * SourceConceptItem.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.interactionApi.beans;
 
-public class SourceConceptItem  implements java.io.Serializable {
+public class SourceConceptItem implements java.io.Serializable {
     private Id id;
 
     private Name name;
@@ -18,18 +18,18 @@ public class SourceConceptItem  implements java.io.Serializable {
     }
 
     public SourceConceptItem(
-           Id id,
-           Name name,
-           Url url) {
-           this.id = id;
-           this.name = name;
-           this.url = url;
+            Id id,
+            Name name,
+            Url url) {
+        this.id = id;
+        this.name = name;
+        this.url = url;
     }
 
 
     /**
      * Gets the id value for this SourceConceptItem.
-     * 
+     *
      * @return id
      */
     public Id getId() {
@@ -39,7 +39,7 @@ public class SourceConceptItem  implements java.io.Serializable {
 
     /**
      * Sets the id value for this SourceConceptItem.
-     * 
+     *
      * @param id
      */
     public void setId(Id id) {
@@ -49,7 +49,7 @@ public class SourceConceptItem  implements java.io.Serializable {
 
     /**
      * Gets the name value for this SourceConceptItem.
-     * 
+     *
      * @return name
      */
     public Name getName() {
@@ -59,7 +59,7 @@ public class SourceConceptItem  implements java.io.Serializable {
 
     /**
      * Sets the name value for this SourceConceptItem.
-     * 
+     *
      * @param name
      */
     public void setName(Name name) {
@@ -69,7 +69,7 @@ public class SourceConceptItem  implements java.io.Serializable {
 
     /**
      * Gets the url value for this SourceConceptItem.
-     * 
+     *
      * @return url
      */
     public Url getUrl() {
@@ -79,7 +79,7 @@ public class SourceConceptItem  implements java.io.Serializable {
 
     /**
      * Sets the url value for this SourceConceptItem.
-     * 
+     *
      * @param url
      */
     public void setUrl(Url url) {
@@ -87,6 +87,7 @@ public class SourceConceptItem  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof SourceConceptItem)) return false;
         SourceConceptItem other = (SourceConceptItem) obj;
@@ -97,21 +98,22 @@ public class SourceConceptItem  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.id==null && other.getId()==null) || 
-             (this.id!=null &&
-              this.id.equals(other.getId()))) &&
-            ((this.name==null && other.getName()==null) || 
-             (this.name!=null &&
-              this.name.equals(other.getName()))) &&
-            ((this.url==null && other.getUrl()==null) || 
-             (this.url!=null &&
-              this.url.equals(other.getUrl())));
+        _equals = true &&
+                ((this.id == null && other.getId() == null) ||
+                        (this.id != null &&
+                                this.id.equals(other.getId()))) &&
+                ((this.name == null && other.getName() == null) ||
+                        (this.name != null &&
+                                this.name.equals(other.getName()))) &&
+                ((this.url == null && other.getUrl() == null) ||
+                        (this.url != null &&
+                                this.url.equals(other.getUrl())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -133,7 +135,7 @@ public class SourceConceptItem  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(SourceConceptItem.class, true);
+            new org.apache.axis.description.TypeDesc(SourceConceptItem.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "SourceConceptItem"));
@@ -168,24 +170,24 @@ public class SourceConceptItem  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

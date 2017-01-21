@@ -1,14 +1,8 @@
 package com.tabula.drugs.model.medicines.interaction;
 
-import com.tabula.drugs.model.medicines.Medicine;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 /**
  * @author Vladyslav_Vinnyk on 12/25/2016.

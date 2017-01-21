@@ -1,6 +1,25 @@
-var drugs = angular.module("medicine", []);
+var drugs = angular.module("readMedicine", ['medicineService']);
+
+drugs.controller("allMedicines", function($http, $scope) {
+
+      	//Request of the medicine from REST.
+      	$http.get("http://localhost:8090/medicine/all").then(function(response) {
+      		$scope.medicines = response.data;
+      	});
+      });
 
 drugs.controller("medicine", function($http, $scope) {
+    $scope.$watch('medicineId', function () {
+        $scope.var2 = $scope.medicineId;
+
+        //Request of the medicine from REST.
+        $http.get("http://localhost:8090/medicine/" + $scope.var2).then(function(response) {
+        	$scope.medicine = response.data;
+        	$scope.dosingUsing = $scope.medicine.dosingAndUsing.adult;
+        });
+    });
+    var medicineId = getMedicineId();
+
 	//Set up Default Menu at start.
 	$scope.menu = {
 		dosingUsing : true,
@@ -10,11 +29,7 @@ drugs.controller("medicine", function($http, $scope) {
 		patientInfo : false
 	};
 
-	//Request of the medicine from REST.
-	$http.get("http://localhost:8090/medicine/15").then(function(response) {
-		$scope.medicine = response.data;
-		$scope.dosingUsing = $scope.medicine.dosingAndUsing.adult;
-	});
+
 
 	//Switch dosing and using. Adult to Pediatrics.
 	$scope.isAdultDosing = true;
@@ -52,3 +67,16 @@ drugs.filter('convertFrequencyEnum', function() {
 		return '';
 	};
 });
+
+function getMedicineId() {
+    var url = window.location.href;
+
+    var parts = url.split("/");
+    var result = parts[parts.length - 1];
+
+    if(!Number.isInteger(result)) {
+              result = "";
+    }
+
+    return result;
+}

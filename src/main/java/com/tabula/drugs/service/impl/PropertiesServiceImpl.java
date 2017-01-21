@@ -1,9 +1,7 @@
 package com.tabula.drugs.service.impl;
 
 import com.tabula.drugs.service.api.PropertiesService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.stereotype.Service;
 
 /**

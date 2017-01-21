@@ -1,6 +1,6 @@
 /**
  * InteractionAPISoapBindingStub.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
@@ -15,14 +15,14 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
     private java.util.Vector cachedSerFactories = new java.util.Vector();
     private java.util.Vector cachedDeserFactories = new java.util.Vector();
 
-    static org.apache.axis.description.OperationDesc [] _operations;
+    static org.apache.axis.description.OperationDesc[] _operations;
 
     static {
         _operations = new org.apache.axis.description.OperationDesc[9];
         _initOperationDesc1();
     }
 
-    private static void _initOperationDesc1(){
+    private static void _initOperationDesc1() {
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -117,12 +117,12 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
     }
 
     public InteractionAPISoapBindingStub() throws org.apache.axis.AxisFault {
-         this(null);
+        this(null);
     }
 
     public InteractionAPISoapBindingStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
-         this(service);
-         super.cachedEndpoint = endpointURL;
+        this(service);
+        super.cachedEndpoint = endpointURL;
     }
 
     public InteractionAPISoapBindingStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
@@ -131,188 +131,188 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
         } else {
             super.service = service;
         }
-        ((org.apache.axis.client.Service)super.service).setTypeMappingVersion("1.2");
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
-            qName = new javax.xml.namespace.QName("https://mor.nlm.nih.gov/axis/services/InteractionAPI", "ArrayOf_soapenc_string");
-            cachedSerQNames.add(qName);
-            cls = java.lang.String[].class;
-            cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string");
-            qName2 = null;
-            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
-            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+        ((org.apache.axis.client.Service) super.service).setTypeMappingVersion("1.2");
+        java.lang.Class cls;
+        javax.xml.namespace.QName qName;
+        javax.xml.namespace.QName qName2;
+        java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+        java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+        java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+        java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+        java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+        java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+        java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+        java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+        java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+        java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
+        qName = new javax.xml.namespace.QName("https://mor.nlm.nih.gov/axis/services/InteractionAPI", "ArrayOf_soapenc_string");
+        cachedSerQNames.add(qName);
+        cls = java.lang.String[].class;
+        cachedSerClasses.add(cls);
+        qName = new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/", "string");
+        qName2 = null;
+        cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+        cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("https://mor.nlm.nih.gov/axis/services/InteractionAPI", "ArrayOf_tns1_FullInteractionTypeGroup");
-            cachedSerQNames.add(qName);
-            cls = FullInteractionTypeGroup[].class;
-            cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:BeanService", "FullInteractionTypeGroup");
-            qName2 = null;
-            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
-            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+        qName = new javax.xml.namespace.QName("https://mor.nlm.nih.gov/axis/services/InteractionAPI", "ArrayOf_tns1_FullInteractionTypeGroup");
+        cachedSerQNames.add(qName);
+        cls = FullInteractionTypeGroup[].class;
+        cachedSerClasses.add(cls);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "FullInteractionTypeGroup");
+        qName2 = null;
+        cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+        cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("https://mor.nlm.nih.gov/axis/services/InteractionAPI", "ArrayOf_tns1_InteractionTypeGroup");
-            cachedSerQNames.add(qName);
-            cls = InteractionTypeGroup[].class;
-            cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionTypeGroup");
-            qName2 = null;
-            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
-            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+        qName = new javax.xml.namespace.QName("https://mor.nlm.nih.gov/axis/services/InteractionAPI", "ArrayOf_tns1_InteractionTypeGroup");
+        cachedSerQNames.add(qName);
+        cls = InteractionTypeGroup[].class;
+        cachedSerClasses.add(cls);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionTypeGroup");
+        qName2 = null;
+        cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+        cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("https://mor.nlm.nih.gov/axis/services/InteractionAPI", "ArrayOf_xsd_anyType");
-            cachedSerQNames.add(qName);
-            cls = java.lang.Object[].class;
-            cachedSerClasses.add(cls);
-            qName = new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "anyType");
-            qName2 = null;
-            cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
-            cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
+        qName = new javax.xml.namespace.QName("https://mor.nlm.nih.gov/axis/services/InteractionAPI", "ArrayOf_xsd_anyType");
+        cachedSerQNames.add(qName);
+        cls = java.lang.Object[].class;
+        cachedSerClasses.add(cls);
+        qName = new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "anyType");
+        qName2 = null;
+        cachedSerFactories.add(new org.apache.axis.encoding.ser.ArraySerializerFactory(qName, qName2));
+        cachedDeserFactories.add(new org.apache.axis.encoding.ser.ArrayDeserializerFactory());
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "Comment");
-            cachedSerQNames.add(qName);
-            cls = Comment.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "Comment");
+        cachedSerQNames.add(qName);
+        cls = Comment.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "Description");
-            cachedSerQNames.add(qName);
-            cls = Description.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "Description");
+        cachedSerQNames.add(qName);
+        cls = Description.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "FullInteractionType");
-            cachedSerQNames.add(qName);
-            cls = FullInteractionType.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "FullInteractionType");
+        cachedSerQNames.add(qName);
+        cls = FullInteractionType.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "FullInteractionTypeGroup");
-            cachedSerQNames.add(qName);
-            cls = FullInteractionTypeGroup.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "FullInteractionTypeGroup");
+        cachedSerQNames.add(qName);
+        cls = FullInteractionTypeGroup.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "Id");
-            cachedSerQNames.add(qName);
-            cls = Id.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "Id");
+        cachedSerQNames.add(qName);
+        cls = Id.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionConcept");
-            cachedSerQNames.add(qName);
-            cls = InteractionConcept.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionConcept");
+        cachedSerQNames.add(qName);
+        cls = InteractionConcept.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionPair");
-            cachedSerQNames.add(qName);
-            cls = InteractionPair.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionPair");
+        cachedSerQNames.add(qName);
+        cls = InteractionPair.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionType");
-            cachedSerQNames.add(qName);
-            cls = InteractionType.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionType");
+        cachedSerQNames.add(qName);
+        cls = InteractionType.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionTypeGroup");
-            cachedSerQNames.add(qName);
-            cls = InteractionTypeGroup.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "InteractionTypeGroup");
+        cachedSerQNames.add(qName);
+        cls = InteractionTypeGroup.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "MinConcept");
-            cachedSerQNames.add(qName);
-            cls = MinConcept.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "MinConcept");
+        cachedSerQNames.add(qName);
+        cls = MinConcept.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "MinConceptItem");
-            cachedSerQNames.add(qName);
-            cls = MinConceptItem.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "MinConceptItem");
+        cachedSerQNames.add(qName);
+        cls = MinConceptItem.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "Name");
-            cachedSerQNames.add(qName);
-            cls = Name.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "Name");
+        cachedSerQNames.add(qName);
+        cls = Name.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "Rxcui");
-            cachedSerQNames.add(qName);
-            cls = Rxcui.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "Rxcui");
+        cachedSerQNames.add(qName);
+        cls = Rxcui.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "Severity");
-            cachedSerQNames.add(qName);
-            cls = Severity.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "Severity");
+        cachedSerQNames.add(qName);
+        cls = Severity.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "SourceConceptItem");
-            cachedSerQNames.add(qName);
-            cls = SourceConceptItem.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "SourceConceptItem");
+        cachedSerQNames.add(qName);
+        cls = SourceConceptItem.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "SourceDisclaimer");
-            cachedSerQNames.add(qName);
-            cls = SourceDisclaimer.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "SourceDisclaimer");
+        cachedSerQNames.add(qName);
+        cls = SourceDisclaimer.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "SourceName");
-            cachedSerQNames.add(qName);
-            cls = SourceName.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "SourceName");
+        cachedSerQNames.add(qName);
+        cls = SourceName.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "Tty");
-            cachedSerQNames.add(qName);
-            cls = Tty.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "Tty");
+        cachedSerQNames.add(qName);
+        cls = Tty.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("urn:BeanService", "Url");
-            cachedSerQNames.add(qName);
-            cls = Url.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
+        qName = new javax.xml.namespace.QName("urn:BeanService", "Url");
+        cachedSerQNames.add(qName);
+        cls = Url.class;
+        cachedSerClasses.add(cls);
+        cachedSerFactories.add(beansf);
+        cachedDeserFactories.add(beandf);
 
     }
 
@@ -359,24 +359,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
                         java.lang.Object x = cachedSerFactories.get(i);
                         if (x instanceof Class) {
                             java.lang.Class sf = (java.lang.Class)
-                                 cachedSerFactories.get(i);
+                                    cachedSerFactories.get(i);
                             java.lang.Class df = (java.lang.Class)
-                                 cachedDeserFactories.get(i);
+                                    cachedDeserFactories.get(i);
                             _call.registerTypeMapping(cls, qName, sf, df, false);
-                        }
-                        else if (x instanceof javax.xml.rpc.encoding.SerializerFactory) {
+                        } else if (x instanceof javax.xml.rpc.encoding.SerializerFactory) {
                             org.apache.axis.encoding.SerializerFactory sf = (org.apache.axis.encoding.SerializerFactory)
-                                 cachedSerFactories.get(i);
+                                    cachedSerFactories.get(i);
                             org.apache.axis.encoding.DeserializerFactory df = (org.apache.axis.encoding.DeserializerFactory)
-                                 cachedDeserFactories.get(i);
+                                    cachedDeserFactories.get(i);
                             _call.registerTypeMapping(cls, qName, sf, df, false);
                         }
                     }
                 }
             }
             return _call;
-        }
-        catch (java.lang.Throwable _t) {
+        } catch (java.lang.Throwable _t) {
             throw new org.apache.axis.AxisFault("Failure trying to get the Call object", _t);
         }
     }
@@ -394,22 +392,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (java.lang.String[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (java.lang.String[]) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String[].class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (java.lang.String[]) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (java.lang.String[]) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String[].class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public java.lang.String[] getInteractionSources() throws java.rmi.RemoteException {
@@ -425,22 +423,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (java.lang.String[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (java.lang.String[]) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String[].class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (java.lang.String[]) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (java.lang.String[]) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String[].class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public InteractionTypeGroup[] findDrugInteractions(java.lang.String rxcui, java.lang.String[] sources) throws java.rmi.RemoteException {
@@ -456,22 +454,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {rxcui, sources});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{rxcui, sources});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (InteractionTypeGroup[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (InteractionTypeGroup[]) org.apache.axis.utils.JavaUtils.convert(_resp, InteractionTypeGroup[].class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (InteractionTypeGroup[]) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (InteractionTypeGroup[]) org.apache.axis.utils.JavaUtils.convert(_resp, InteractionTypeGroup[].class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public FullInteractionTypeGroup[] findInteractionsFromList(java.lang.String[] rxcuiList, java.lang.String[] sources) throws java.rmi.RemoteException {
@@ -487,22 +485,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {rxcuiList, sources});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{rxcuiList, sources});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (FullInteractionTypeGroup[]) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (FullInteractionTypeGroup[]) org.apache.axis.utils.JavaUtils.convert(_resp, FullInteractionTypeGroup[].class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (FullInteractionTypeGroup[]) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (FullInteractionTypeGroup[]) org.apache.axis.utils.JavaUtils.convert(_resp, FullInteractionTypeGroup[].class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public InteractionType DUMMY_DONOTUSE_getOneInteractionType() throws java.rmi.RemoteException {
@@ -518,22 +516,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (InteractionType) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (InteractionType) org.apache.axis.utils.JavaUtils.convert(_resp, InteractionType.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (InteractionType) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (InteractionType) org.apache.axis.utils.JavaUtils.convert(_resp, InteractionType.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public FullInteractionType DUMMY_DONOTUSE_getOneFullInteractionType() throws java.rmi.RemoteException {
@@ -549,22 +547,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (FullInteractionType) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (FullInteractionType) org.apache.axis.utils.JavaUtils.convert(_resp, FullInteractionType.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (FullInteractionType) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (FullInteractionType) org.apache.axis.utils.JavaUtils.convert(_resp, FullInteractionType.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public InteractionConcept DUMMY_DONOTUSE_getOneInteractionConcept() throws java.rmi.RemoteException {
@@ -580,22 +578,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (InteractionConcept) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (InteractionConcept) org.apache.axis.utils.JavaUtils.convert(_resp, InteractionConcept.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (InteractionConcept) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (InteractionConcept) org.apache.axis.utils.JavaUtils.convert(_resp, InteractionConcept.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public InteractionPair DUMMY_DONOTUSE_getOneInteractionPair() throws java.rmi.RemoteException {
@@ -611,22 +609,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (InteractionPair) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (InteractionPair) org.apache.axis.utils.JavaUtils.convert(_resp, InteractionPair.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (InteractionPair) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (InteractionPair) org.apache.axis.utils.JavaUtils.convert(_resp, InteractionPair.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public MinConcept DUMMY_DONOTUSE_getOneMinConcept() throws java.rmi.RemoteException {
@@ -642,22 +640,22 @@ public class InteractionAPISoapBindingStub extends org.apache.axis.client.Stub i
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {});
+        try {
+            java.lang.Object _resp = _call.invoke(new java.lang.Object[]{});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (MinConcept) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (MinConcept) org.apache.axis.utils.JavaUtils.convert(_resp, MinConcept.class);
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return (MinConcept) _resp;
+                } catch (java.lang.Exception _exception) {
+                    return (MinConcept) org.apache.axis.utils.JavaUtils.convert(_resp, MinConcept.class);
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
 }

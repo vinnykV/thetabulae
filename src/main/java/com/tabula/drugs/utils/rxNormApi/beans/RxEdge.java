@@ -1,13 +1,13 @@
 /**
  * RxEdge.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.rxNormApi.beans;
 
-public class RxEdge  implements java.io.Serializable {
+public class RxEdge implements java.io.Serializable {
     private java.lang.String ID1;
 
     private java.lang.String ID2;
@@ -18,18 +18,18 @@ public class RxEdge  implements java.io.Serializable {
     }
 
     public RxEdge(
-           java.lang.String ID1,
-           java.lang.String ID2,
-           java.lang.String REL) {
-           this.ID1 = ID1;
-           this.ID2 = ID2;
-           this.REL = REL;
+            java.lang.String ID1,
+            java.lang.String ID2,
+            java.lang.String REL) {
+        this.ID1 = ID1;
+        this.ID2 = ID2;
+        this.REL = REL;
     }
 
 
     /**
      * Gets the ID1 value for this RxEdge.
-     * 
+     *
      * @return ID1
      */
     public java.lang.String getID1() {
@@ -39,7 +39,7 @@ public class RxEdge  implements java.io.Serializable {
 
     /**
      * Sets the ID1 value for this RxEdge.
-     * 
+     *
      * @param ID1
      */
     public void setID1(java.lang.String ID1) {
@@ -49,7 +49,7 @@ public class RxEdge  implements java.io.Serializable {
 
     /**
      * Gets the ID2 value for this RxEdge.
-     * 
+     *
      * @return ID2
      */
     public java.lang.String getID2() {
@@ -59,7 +59,7 @@ public class RxEdge  implements java.io.Serializable {
 
     /**
      * Sets the ID2 value for this RxEdge.
-     * 
+     *
      * @param ID2
      */
     public void setID2(java.lang.String ID2) {
@@ -69,7 +69,7 @@ public class RxEdge  implements java.io.Serializable {
 
     /**
      * Gets the REL value for this RxEdge.
-     * 
+     *
      * @return REL
      */
     public java.lang.String getREL() {
@@ -79,7 +79,7 @@ public class RxEdge  implements java.io.Serializable {
 
     /**
      * Sets the REL value for this RxEdge.
-     * 
+     *
      * @param REL
      */
     public void setREL(java.lang.String REL) {
@@ -87,6 +87,7 @@ public class RxEdge  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof RxEdge)) return false;
         RxEdge other = (RxEdge) obj;
@@ -97,21 +98,22 @@ public class RxEdge  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.ID1==null && other.getID1()==null) || 
-             (this.ID1!=null &&
-              this.ID1.equals(other.getID1()))) &&
-            ((this.ID2==null && other.getID2()==null) || 
-             (this.ID2!=null &&
-              this.ID2.equals(other.getID2()))) &&
-            ((this.REL==null && other.getREL()==null) || 
-             (this.REL!=null &&
-              this.REL.equals(other.getREL())));
+        _equals = true &&
+                ((this.ID1 == null && other.getID1() == null) ||
+                        (this.ID1 != null &&
+                                this.ID1.equals(other.getID1()))) &&
+                ((this.ID2 == null && other.getID2() == null) ||
+                        (this.ID2 != null &&
+                                this.ID2.equals(other.getID2()))) &&
+                ((this.REL == null && other.getREL() == null) ||
+                        (this.REL != null &&
+                                this.REL.equals(other.getREL())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -133,7 +135,7 @@ public class RxEdge  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RxEdge.class, true);
+            new org.apache.axis.description.TypeDesc(RxEdge.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "RxEdge"));
@@ -168,24 +170,24 @@ public class RxEdge  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

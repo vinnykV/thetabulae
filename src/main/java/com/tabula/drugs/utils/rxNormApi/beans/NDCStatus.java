@@ -1,6 +1,6 @@
 /**
  * NDCStatus.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
@@ -9,7 +9,7 @@ package com.tabula.drugs.utils.rxNormApi.beans;
 
 import java.util.Arrays;
 
-public class NDCStatus  implements java.io.Serializable {
+public class NDCStatus implements java.io.Serializable {
     private java.lang.String comment;
 
     private NDCDate[] ndcdate;
@@ -20,18 +20,18 @@ public class NDCStatus  implements java.io.Serializable {
     }
 
     public NDCStatus(
-           java.lang.String comment,
-           NDCDate[] ndcdate,
-           java.lang.String status) {
-           this.comment = comment;
-           this.ndcdate = ndcdate;
-           this.status = status;
+            java.lang.String comment,
+            NDCDate[] ndcdate,
+            java.lang.String status) {
+        this.comment = comment;
+        this.ndcdate = ndcdate;
+        this.status = status;
     }
 
 
     /**
      * Gets the comment value for this NDCStatus.
-     * 
+     *
      * @return comment
      */
     public java.lang.String getComment() {
@@ -41,7 +41,7 @@ public class NDCStatus  implements java.io.Serializable {
 
     /**
      * Sets the comment value for this NDCStatus.
-     * 
+     *
      * @param comment
      */
     public void setComment(java.lang.String comment) {
@@ -51,7 +51,7 @@ public class NDCStatus  implements java.io.Serializable {
 
     /**
      * Gets the ndcdate value for this NDCStatus.
-     * 
+     *
      * @return ndcdate
      */
     public NDCDate[] getNdcdate() {
@@ -61,7 +61,7 @@ public class NDCStatus  implements java.io.Serializable {
 
     /**
      * Sets the ndcdate value for this NDCStatus.
-     * 
+     *
      * @param ndcdate
      */
     public void setNdcdate(NDCDate[] ndcdate) {
@@ -71,7 +71,7 @@ public class NDCStatus  implements java.io.Serializable {
 
     /**
      * Gets the status value for this NDCStatus.
-     * 
+     *
      * @return status
      */
     public java.lang.String getStatus() {
@@ -81,7 +81,7 @@ public class NDCStatus  implements java.io.Serializable {
 
     /**
      * Sets the status value for this NDCStatus.
-     * 
+     *
      * @param status
      */
     public void setStatus(java.lang.String status) {
@@ -89,6 +89,7 @@ public class NDCStatus  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof NDCStatus)) return false;
         NDCStatus other = (NDCStatus) obj;
@@ -99,21 +100,22 @@ public class NDCStatus  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.comment==null && other.getComment()==null) || 
-             (this.comment!=null &&
-              this.comment.equals(other.getComment()))) &&
-            ((this.ndcdate==null && other.getNdcdate()==null) || 
-             (this.ndcdate!=null &&
-              java.util.Arrays.equals(this.ndcdate, other.getNdcdate()))) &&
-            ((this.status==null && other.getStatus()==null) || 
-             (this.status!=null &&
-              this.status.equals(other.getStatus())));
+        _equals = true &&
+                ((this.comment == null && other.getComment() == null) ||
+                        (this.comment != null &&
+                                this.comment.equals(other.getComment()))) &&
+                ((this.ndcdate == null && other.getNdcdate() == null) ||
+                        (this.ndcdate != null &&
+                                java.util.Arrays.equals(this.ndcdate, other.getNdcdate()))) &&
+                ((this.status == null && other.getStatus() == null) ||
+                        (this.status != null &&
+                                this.status.equals(other.getStatus())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -124,12 +126,12 @@ public class NDCStatus  implements java.io.Serializable {
             _hashCode += getComment().hashCode();
         }
         if (getNdcdate() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getNdcdate());
+            for (int i = 0;
+                 i < java.lang.reflect.Array.getLength(getNdcdate());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(getNdcdate(), i);
                 if (obj != null &&
-                    !obj.getClass().isArray()) {
+                        !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
                 }
             }
@@ -143,7 +145,7 @@ public class NDCStatus  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(NDCStatus.class, true);
+            new org.apache.axis.description.TypeDesc(NDCStatus.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "NDCStatus"));
@@ -178,24 +180,24 @@ public class NDCStatus  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

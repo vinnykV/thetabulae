@@ -1,13 +1,13 @@
 /**
  * RxMinimalConcept.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.rxNormApi.beans;
 
-public class RxMinimalConcept  implements java.io.Serializable {
+public class RxMinimalConcept implements java.io.Serializable {
     private java.lang.String RXCUI;
 
     private java.lang.String STR;
@@ -18,18 +18,18 @@ public class RxMinimalConcept  implements java.io.Serializable {
     }
 
     public RxMinimalConcept(
-           java.lang.String RXCUI,
-           java.lang.String STR,
-           java.lang.String TTY) {
-           this.RXCUI = RXCUI;
-           this.STR = STR;
-           this.TTY = TTY;
+            java.lang.String RXCUI,
+            java.lang.String STR,
+            java.lang.String TTY) {
+        this.RXCUI = RXCUI;
+        this.STR = STR;
+        this.TTY = TTY;
     }
 
 
     /**
      * Gets the RXCUI value for this RxMinimalConcept.
-     * 
+     *
      * @return RXCUI
      */
     public java.lang.String getRXCUI() {
@@ -39,7 +39,7 @@ public class RxMinimalConcept  implements java.io.Serializable {
 
     /**
      * Sets the RXCUI value for this RxMinimalConcept.
-     * 
+     *
      * @param RXCUI
      */
     public void setRXCUI(java.lang.String RXCUI) {
@@ -49,7 +49,7 @@ public class RxMinimalConcept  implements java.io.Serializable {
 
     /**
      * Gets the STR value for this RxMinimalConcept.
-     * 
+     *
      * @return STR
      */
     public java.lang.String getSTR() {
@@ -59,7 +59,7 @@ public class RxMinimalConcept  implements java.io.Serializable {
 
     /**
      * Sets the STR value for this RxMinimalConcept.
-     * 
+     *
      * @param STR
      */
     public void setSTR(java.lang.String STR) {
@@ -69,7 +69,7 @@ public class RxMinimalConcept  implements java.io.Serializable {
 
     /**
      * Gets the TTY value for this RxMinimalConcept.
-     * 
+     *
      * @return TTY
      */
     public java.lang.String getTTY() {
@@ -79,7 +79,7 @@ public class RxMinimalConcept  implements java.io.Serializable {
 
     /**
      * Sets the TTY value for this RxMinimalConcept.
-     * 
+     *
      * @param TTY
      */
     public void setTTY(java.lang.String TTY) {
@@ -87,6 +87,7 @@ public class RxMinimalConcept  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof RxMinimalConcept)) return false;
         RxMinimalConcept other = (RxMinimalConcept) obj;
@@ -97,21 +98,22 @@ public class RxMinimalConcept  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.RXCUI==null && other.getRXCUI()==null) || 
-             (this.RXCUI!=null &&
-              this.RXCUI.equals(other.getRXCUI()))) &&
-            ((this.STR==null && other.getSTR()==null) || 
-             (this.STR!=null &&
-              this.STR.equals(other.getSTR()))) &&
-            ((this.TTY==null && other.getTTY()==null) || 
-             (this.TTY!=null &&
-              this.TTY.equals(other.getTTY())));
+        _equals = true &&
+                ((this.RXCUI == null && other.getRXCUI() == null) ||
+                        (this.RXCUI != null &&
+                                this.RXCUI.equals(other.getRXCUI()))) &&
+                ((this.STR == null && other.getSTR() == null) ||
+                        (this.STR != null &&
+                                this.STR.equals(other.getSTR()))) &&
+                ((this.TTY == null && other.getTTY() == null) ||
+                        (this.TTY != null &&
+                                this.TTY.equals(other.getTTY())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -133,7 +135,7 @@ public class RxMinimalConcept  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RxMinimalConcept.class, true);
+            new org.apache.axis.description.TypeDesc(RxMinimalConcept.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "RxMinimalConcept"));
@@ -168,24 +170,24 @@ public class RxMinimalConcept  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

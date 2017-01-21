@@ -1,13 +1,13 @@
 /**
  * NDCTime.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.rxNormApi.beans;
 
-public class NDCTime  implements java.io.Serializable {
+public class NDCTime implements java.io.Serializable {
     private java.lang.String ENDDATE;
 
     private java.lang.String NDC;
@@ -18,18 +18,18 @@ public class NDCTime  implements java.io.Serializable {
     }
 
     public NDCTime(
-           java.lang.String ENDDATE,
-           java.lang.String NDC,
-           java.lang.String STARTDATE) {
-           this.ENDDATE = ENDDATE;
-           this.NDC = NDC;
-           this.STARTDATE = STARTDATE;
+            java.lang.String ENDDATE,
+            java.lang.String NDC,
+            java.lang.String STARTDATE) {
+        this.ENDDATE = ENDDATE;
+        this.NDC = NDC;
+        this.STARTDATE = STARTDATE;
     }
 
 
     /**
      * Gets the ENDDATE value for this NDCTime.
-     * 
+     *
      * @return ENDDATE
      */
     public java.lang.String getENDDATE() {
@@ -39,7 +39,7 @@ public class NDCTime  implements java.io.Serializable {
 
     /**
      * Sets the ENDDATE value for this NDCTime.
-     * 
+     *
      * @param ENDDATE
      */
     public void setENDDATE(java.lang.String ENDDATE) {
@@ -49,7 +49,7 @@ public class NDCTime  implements java.io.Serializable {
 
     /**
      * Gets the NDC value for this NDCTime.
-     * 
+     *
      * @return NDC
      */
     public java.lang.String getNDC() {
@@ -59,7 +59,7 @@ public class NDCTime  implements java.io.Serializable {
 
     /**
      * Sets the NDC value for this NDCTime.
-     * 
+     *
      * @param NDC
      */
     public void setNDC(java.lang.String NDC) {
@@ -69,7 +69,7 @@ public class NDCTime  implements java.io.Serializable {
 
     /**
      * Gets the STARTDATE value for this NDCTime.
-     * 
+     *
      * @return STARTDATE
      */
     public java.lang.String getSTARTDATE() {
@@ -79,7 +79,7 @@ public class NDCTime  implements java.io.Serializable {
 
     /**
      * Sets the STARTDATE value for this NDCTime.
-     * 
+     *
      * @param STARTDATE
      */
     public void setSTARTDATE(java.lang.String STARTDATE) {
@@ -87,6 +87,7 @@ public class NDCTime  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof NDCTime)) return false;
         NDCTime other = (NDCTime) obj;
@@ -97,21 +98,22 @@ public class NDCTime  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.ENDDATE==null && other.getENDDATE()==null) || 
-             (this.ENDDATE!=null &&
-              this.ENDDATE.equals(other.getENDDATE()))) &&
-            ((this.NDC==null && other.getNDC()==null) || 
-             (this.NDC!=null &&
-              this.NDC.equals(other.getNDC()))) &&
-            ((this.STARTDATE==null && other.getSTARTDATE()==null) || 
-             (this.STARTDATE!=null &&
-              this.STARTDATE.equals(other.getSTARTDATE())));
+        _equals = true &&
+                ((this.ENDDATE == null && other.getENDDATE() == null) ||
+                        (this.ENDDATE != null &&
+                                this.ENDDATE.equals(other.getENDDATE()))) &&
+                ((this.NDC == null && other.getNDC() == null) ||
+                        (this.NDC != null &&
+                                this.NDC.equals(other.getNDC()))) &&
+                ((this.STARTDATE == null && other.getSTARTDATE() == null) ||
+                        (this.STARTDATE != null &&
+                                this.STARTDATE.equals(other.getSTARTDATE())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -133,7 +135,7 @@ public class NDCTime  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(NDCTime.class, true);
+            new org.apache.axis.description.TypeDesc(NDCTime.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "NDCTime"));
@@ -168,24 +170,24 @@ public class NDCTime  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

@@ -2,13 +2,7 @@ package com.tabula.drugs.model.medicines.dosing;
 
 import com.tabula.drugs.model.medicines.Medicine;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 /**
  * @author Vladyslav_Vinnyk on 12/21/2016.
@@ -16,7 +10,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class DosingAndUsing {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @OneToOne(mappedBy = "dosingAndUsing", cascade = CascadeType.ALL)

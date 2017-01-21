@@ -1,13 +1,13 @@
 /**
  * RxTermInfo.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.rxNormApi.beans;
 
-public class RxTermInfo  implements java.io.Serializable {
+public class RxTermInfo implements java.io.Serializable {
     private java.lang.String CODE;
 
     private java.lang.String RXCUI;
@@ -22,22 +22,22 @@ public class RxTermInfo  implements java.io.Serializable {
     }
 
     public RxTermInfo(
-           java.lang.String CODE,
-           java.lang.String RXCUI,
-           java.lang.String SAB,
-           java.lang.String STR,
-           java.lang.String TTY) {
-           this.CODE = CODE;
-           this.RXCUI = RXCUI;
-           this.SAB = SAB;
-           this.STR = STR;
-           this.TTY = TTY;
+            java.lang.String CODE,
+            java.lang.String RXCUI,
+            java.lang.String SAB,
+            java.lang.String STR,
+            java.lang.String TTY) {
+        this.CODE = CODE;
+        this.RXCUI = RXCUI;
+        this.SAB = SAB;
+        this.STR = STR;
+        this.TTY = TTY;
     }
 
 
     /**
      * Gets the CODE value for this RxTermInfo.
-     * 
+     *
      * @return CODE
      */
     public java.lang.String getCODE() {
@@ -47,7 +47,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Sets the CODE value for this RxTermInfo.
-     * 
+     *
      * @param CODE
      */
     public void setCODE(java.lang.String CODE) {
@@ -57,7 +57,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Gets the RXCUI value for this RxTermInfo.
-     * 
+     *
      * @return RXCUI
      */
     public java.lang.String getRXCUI() {
@@ -67,7 +67,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Sets the RXCUI value for this RxTermInfo.
-     * 
+     *
      * @param RXCUI
      */
     public void setRXCUI(java.lang.String RXCUI) {
@@ -77,7 +77,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Gets the SAB value for this RxTermInfo.
-     * 
+     *
      * @return SAB
      */
     public java.lang.String getSAB() {
@@ -87,7 +87,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Sets the SAB value for this RxTermInfo.
-     * 
+     *
      * @param SAB
      */
     public void setSAB(java.lang.String SAB) {
@@ -97,7 +97,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Gets the STR value for this RxTermInfo.
-     * 
+     *
      * @return STR
      */
     public java.lang.String getSTR() {
@@ -107,7 +107,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Sets the STR value for this RxTermInfo.
-     * 
+     *
      * @param STR
      */
     public void setSTR(java.lang.String STR) {
@@ -117,7 +117,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Gets the TTY value for this RxTermInfo.
-     * 
+     *
      * @return TTY
      */
     public java.lang.String getTTY() {
@@ -127,7 +127,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     /**
      * Sets the TTY value for this RxTermInfo.
-     * 
+     *
      * @param TTY
      */
     public void setTTY(java.lang.String TTY) {
@@ -135,6 +135,7 @@ public class RxTermInfo  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof RxTermInfo)) return false;
         RxTermInfo other = (RxTermInfo) obj;
@@ -145,27 +146,28 @@ public class RxTermInfo  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.CODE==null && other.getCODE()==null) || 
-             (this.CODE!=null &&
-              this.CODE.equals(other.getCODE()))) &&
-            ((this.RXCUI==null && other.getRXCUI()==null) || 
-             (this.RXCUI!=null &&
-              this.RXCUI.equals(other.getRXCUI()))) &&
-            ((this.SAB==null && other.getSAB()==null) || 
-             (this.SAB!=null &&
-              this.SAB.equals(other.getSAB()))) &&
-            ((this.STR==null && other.getSTR()==null) || 
-             (this.STR!=null &&
-              this.STR.equals(other.getSTR()))) &&
-            ((this.TTY==null && other.getTTY()==null) || 
-             (this.TTY!=null &&
-              this.TTY.equals(other.getTTY())));
+        _equals = true &&
+                ((this.CODE == null && other.getCODE() == null) ||
+                        (this.CODE != null &&
+                                this.CODE.equals(other.getCODE()))) &&
+                ((this.RXCUI == null && other.getRXCUI() == null) ||
+                        (this.RXCUI != null &&
+                                this.RXCUI.equals(other.getRXCUI()))) &&
+                ((this.SAB == null && other.getSAB() == null) ||
+                        (this.SAB != null &&
+                                this.SAB.equals(other.getSAB()))) &&
+                ((this.STR == null && other.getSTR() == null) ||
+                        (this.STR != null &&
+                                this.STR.equals(other.getSTR()))) &&
+                ((this.TTY == null && other.getTTY() == null) ||
+                        (this.TTY != null &&
+                                this.TTY.equals(other.getTTY())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -193,7 +195,7 @@ public class RxTermInfo  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RxTermInfo.class, true);
+            new org.apache.axis.description.TypeDesc(RxTermInfo.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "RxTermInfo"));
@@ -240,24 +242,24 @@ public class RxTermInfo  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

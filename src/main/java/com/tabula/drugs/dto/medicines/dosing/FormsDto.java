@@ -2,8 +2,6 @@ package com.tabula.drugs.dto.medicines.dosing;
 
 import com.tabula.drugs.model.medicines.dosing.Forms;
 
-import javax.persistence.Column;
-
 /**
  * @author Vladyslav_Vinnyk on 12/26/2016.
  */

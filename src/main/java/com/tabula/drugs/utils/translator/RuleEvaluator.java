@@ -2,12 +2,9 @@ package com.tabula.drugs.utils.translator;
 
 import com.tabula.drugs.utils.ConstantsContainer;
 import com.tabula.drugs.utils.translator.model.ConvertingRule;
-import com.tabula.drugs.utils.translator.model.Rule;
 import org.apache.commons.lang3.mutable.MutableInt;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author Vladyslav_Vinnyk on 12/16/2016.

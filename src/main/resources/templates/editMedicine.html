@@ -4,9 +4,13 @@ Halcyonic by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org " ng-app="createMedicine">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org " ng-app="app">
 <head>
     <title>The Tabulae</title>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!--[if lte IE 8]>
@@ -19,7 +23,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
-    <script src="assets/js/angular/httpPostController.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+    <script src="https://code.angularjs.org/1.4.8/angular-route.js"></script>
+    <script th:src="@{~/assets/js/angular/app.js}"></script>
+    <script th:src="@{~/assets/js/angular/controller.js}"></script>
+    <script th:src="@{~/assets/js/angular/httpPostController.js}"></script>
+    <script th:src="@{~/assets/js/angular/medicineService.js}"></script>
 </head>
 <body class="subpage">
 <div ng-controller="createMedicine" id="page-wrapper">
@@ -30,14 +39,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 <div class="12u">
 
                     <!-- Logo -->
-                    <h1><a href="#" id="logo">Halcyonic</a></h1>
+                    <h1><a href="#" id="logo">The Tabulae</a></h1>
 
                     <!-- Nav -->
                     <nav id="nav">
                         <a href="index.html">Homepage</a>
                         <a href="threecolumn.html">Three Column</a>
                         <a href="twocolumn1.html">Two Column #1</a>
-                        <a href="medicine.html">Medicines</a>
+                        <a href="allMedicines.html">All Medicines</a>
                         <a href="onecolumn.html">One Column</a>
                     </nav>
 
@@ -55,7 +64,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         <!-- Sidebar -->
                         <section>
                             <header>
-                                <h2>{{medicineName}}</h2>
+                                <h2 ng-cloak="">{{medicineName}}</h2>
                             </header>
                             <ul class="link-list">
                                 <li>

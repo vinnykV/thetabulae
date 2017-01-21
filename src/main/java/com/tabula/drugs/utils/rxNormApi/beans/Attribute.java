@@ -1,13 +1,13 @@
 /**
  * Attribute.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.rxNormApi.beans;
 
-public class Attribute  implements java.io.Serializable {
+public class Attribute implements java.io.Serializable {
     private java.lang.String NAME;
 
     private java.lang.String VALUE;
@@ -16,16 +16,16 @@ public class Attribute  implements java.io.Serializable {
     }
 
     public Attribute(
-           java.lang.String NAME,
-           java.lang.String VALUE) {
-           this.NAME = NAME;
-           this.VALUE = VALUE;
+            java.lang.String NAME,
+            java.lang.String VALUE) {
+        this.NAME = NAME;
+        this.VALUE = VALUE;
     }
 
 
     /**
      * Gets the NAME value for this Attribute.
-     * 
+     *
      * @return NAME
      */
     public java.lang.String getNAME() {
@@ -35,7 +35,7 @@ public class Attribute  implements java.io.Serializable {
 
     /**
      * Sets the NAME value for this Attribute.
-     * 
+     *
      * @param NAME
      */
     public void setNAME(java.lang.String NAME) {
@@ -45,7 +45,7 @@ public class Attribute  implements java.io.Serializable {
 
     /**
      * Gets the VALUE value for this Attribute.
-     * 
+     *
      * @return VALUE
      */
     public java.lang.String getVALUE() {
@@ -55,7 +55,7 @@ public class Attribute  implements java.io.Serializable {
 
     /**
      * Sets the VALUE value for this Attribute.
-     * 
+     *
      * @param VALUE
      */
     public void setVALUE(java.lang.String VALUE) {
@@ -63,6 +63,7 @@ public class Attribute  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof Attribute)) return false;
         Attribute other = (Attribute) obj;
@@ -73,18 +74,19 @@ public class Attribute  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.NAME==null && other.getNAME()==null) || 
-             (this.NAME!=null &&
-              this.NAME.equals(other.getNAME()))) &&
-            ((this.VALUE==null && other.getVALUE()==null) || 
-             (this.VALUE!=null &&
-              this.VALUE.equals(other.getVALUE())));
+        _equals = true &&
+                ((this.NAME == null && other.getNAME() == null) ||
+                        (this.NAME != null &&
+                                this.NAME.equals(other.getNAME()))) &&
+                ((this.VALUE == null && other.getVALUE() == null) ||
+                        (this.VALUE != null &&
+                                this.VALUE.equals(other.getVALUE())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -103,7 +105,7 @@ public class Attribute  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(Attribute.class, true);
+            new org.apache.axis.description.TypeDesc(Attribute.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "Attribute"));
@@ -132,24 +134,24 @@ public class Attribute  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override
