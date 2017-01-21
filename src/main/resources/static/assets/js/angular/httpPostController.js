@@ -45,7 +45,7 @@ drugs.controller("createMedicine", function($http, $scope, $cookies) {
 
 		var req = {
          method: 'POST',
-         url: 'http://localhost:8090/medicine',
+         url: '/medicine',
          headers: {
            "X-CSRF-TOKEN": token
          },
