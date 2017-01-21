@@ -1,6 +1,5 @@
 package com.tabula.drugs.dto.medicines.pharmacology;
 
-import com.tabula.drugs.model.medicines.Medicine;
 import com.tabula.drugs.model.medicines.pharmacology.Pharmacology;
 
 /**

@@ -4,17 +4,7 @@ import com.tabula.drugs.utils.ConstantsContainer;
 import com.tabula.drugs.utils.translator.containers.RulesContainer;
 import com.tabula.drugs.utils.translator.model.ConvertingRule;
 import com.tabula.drugs.utils.translator.model.Language;
-import org.apache.commons.codec.language.bm.Lang;
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * @author Vladyslav_Vinnyk on 12/16/2016.

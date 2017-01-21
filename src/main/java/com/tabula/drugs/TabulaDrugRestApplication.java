@@ -1,6 +1,5 @@
 package com.tabula.drugs;
 
-import com.tabula.drugs.configuration.ApplicationConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -125,4 +125,56 @@ databaseChangeLog() {
             }
         }
     }
+
+    changeSet(id: 'change-set-tabulae-5', author: 'vladyslav_vinnyk') {
+        createTable(tableName: "role") {
+            column(name: "id", type: "BIGINT", autoIncrement: true) {
+                constraints(primaryKey: "true")
+            }
+            column(name: "name", type: "VARCHAR") {
+                constraints(nullable: "false")
+            }
+        }
+        createTable(tableName: "customer") {
+            column(name: "id", type: "BIGINT", autoIncrement: true) {
+                constraints(primaryKey: "true")
+            }
+            column(name: "username", type: "VARCHAR") {
+                constraints(nullable: "false")
+            }
+            column(name: "password", type: "VARCHAR") {
+                constraints(nullable: "false")
+            }
+        }
+        createTable(tableName: "customer_role") {
+            column(name: "id", type: "BIGINT", autoIncrement: true) {
+                constraints(primaryKey: "true")
+            }
+            column(name: "role_id", type: "BIGINT") {
+                constraints(nullable: "false")
+                constraints(foreignKeyName: 'role_id', references: 'role')
+            }
+            column(name: "customer_id", type: "BIGINT") {
+                constraints(nullable: "false")
+                constraints(foreignKeyName: 'customer_id', references: 'customer')
+            }
+        }
+    }
+//    changeSet(id: 'change-set-tabulae-6', author: 'vladyslav_vinnyk') {
+//        sql() {
+//            "INSERT INTO role (name) VALUES " +
+//                    "('ROLE_ADMIN')," +
+//                    "('ROLE_USER')";
+//        }
+//        sql() {
+//            "INSERT INTO customer (username, password) VALUES " +
+//                    "('admin', 'admin')," +
+//                    "('user', 'user')";
+//        }
+//        sql() {
+//            "INSERT INTO customer_role (role_id, customer_id) VALUES " +
+//                    "('1', '1')," +
+//                    "('2', '2')";
+//        }
+//    }
 }

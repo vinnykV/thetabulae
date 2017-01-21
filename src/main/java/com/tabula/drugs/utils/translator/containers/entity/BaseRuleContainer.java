@@ -1,16 +1,8 @@
 package com.tabula.drugs.utils.translator.containers.entity;
 
-import com.tabula.drugs.utils.translator.containers.RulesContainer;
 import com.tabula.drugs.utils.translator.model.ConvertingRule;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author Vladyslav_Vinnyk on 12/20/2016.

@@ -2,7 +2,6 @@ package com.tabula.drugs.model.medicines;
 
 import com.tabula.drugs.model.medicines.adverseEffects.AdverseEffects;
 import com.tabula.drugs.model.medicines.dosing.DosingAndUsing;
-import com.tabula.drugs.model.medicines.interaction.Interaction;
 import com.tabula.drugs.model.medicines.pharmacology.Pharmacology;
 import com.tabula.drugs.model.medicines.pregnancy.Pregnancy;
 import com.tabula.drugs.utils.asserter.Assert;
@@ -77,7 +76,7 @@ public class Medicine implements Serializable {
     }
 
     public void setPregnancy(Pregnancy pregnancy) {
-        if(this.getName() == null) {
+        if (this.getName() == null) {
             this.setName("name2");
         }
         pregnancy.setMedicine(this);

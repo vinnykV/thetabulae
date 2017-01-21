@@ -1,13 +1,13 @@
 /**
  * RxConcept.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
 package com.tabula.drugs.utils.rxNormApi.beans;
 
-public class RxConcept  implements java.io.Serializable {
+public class RxConcept implements java.io.Serializable {
     private java.lang.String CUI;
 
     private java.lang.String LAT;
@@ -26,26 +26,26 @@ public class RxConcept  implements java.io.Serializable {
     }
 
     public RxConcept(
-           java.lang.String CUI,
-           java.lang.String LAT,
-           java.lang.String RXCUI,
-           java.lang.String STR,
-           java.lang.String SUPPRESS,
-           java.lang.String SY,
-           java.lang.String TTY) {
-           this.CUI = CUI;
-           this.LAT = LAT;
-           this.RXCUI = RXCUI;
-           this.STR = STR;
-           this.SUPPRESS = SUPPRESS;
-           this.SY = SY;
-           this.TTY = TTY;
+            java.lang.String CUI,
+            java.lang.String LAT,
+            java.lang.String RXCUI,
+            java.lang.String STR,
+            java.lang.String SUPPRESS,
+            java.lang.String SY,
+            java.lang.String TTY) {
+        this.CUI = CUI;
+        this.LAT = LAT;
+        this.RXCUI = RXCUI;
+        this.STR = STR;
+        this.SUPPRESS = SUPPRESS;
+        this.SY = SY;
+        this.TTY = TTY;
     }
 
 
     /**
      * Gets the CUI value for this RxConcept.
-     * 
+     *
      * @return CUI
      */
     public java.lang.String getCUI() {
@@ -55,7 +55,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Sets the CUI value for this RxConcept.
-     * 
+     *
      * @param CUI
      */
     public void setCUI(java.lang.String CUI) {
@@ -65,7 +65,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Gets the LAT value for this RxConcept.
-     * 
+     *
      * @return LAT
      */
     public java.lang.String getLAT() {
@@ -75,7 +75,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Sets the LAT value for this RxConcept.
-     * 
+     *
      * @param LAT
      */
     public void setLAT(java.lang.String LAT) {
@@ -85,7 +85,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Gets the RXCUI value for this RxConcept.
-     * 
+     *
      * @return RXCUI
      */
     public java.lang.String getRXCUI() {
@@ -95,7 +95,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Sets the RXCUI value for this RxConcept.
-     * 
+     *
      * @param RXCUI
      */
     public void setRXCUI(java.lang.String RXCUI) {
@@ -105,7 +105,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Gets the STR value for this RxConcept.
-     * 
+     *
      * @return STR
      */
     public java.lang.String getSTR() {
@@ -115,7 +115,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Sets the STR value for this RxConcept.
-     * 
+     *
      * @param STR
      */
     public void setSTR(java.lang.String STR) {
@@ -125,7 +125,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Gets the SUPPRESS value for this RxConcept.
-     * 
+     *
      * @return SUPPRESS
      */
     public java.lang.String getSUPPRESS() {
@@ -135,7 +135,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Sets the SUPPRESS value for this RxConcept.
-     * 
+     *
      * @param SUPPRESS
      */
     public void setSUPPRESS(java.lang.String SUPPRESS) {
@@ -145,7 +145,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Gets the SY value for this RxConcept.
-     * 
+     *
      * @return SY
      */
     public java.lang.String getSY() {
@@ -155,7 +155,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Sets the SY value for this RxConcept.
-     * 
+     *
      * @param SY
      */
     public void setSY(java.lang.String SY) {
@@ -165,7 +165,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Gets the TTY value for this RxConcept.
-     * 
+     *
      * @return TTY
      */
     public java.lang.String getTTY() {
@@ -175,7 +175,7 @@ public class RxConcept  implements java.io.Serializable {
 
     /**
      * Sets the TTY value for this RxConcept.
-     * 
+     *
      * @param TTY
      */
     public void setTTY(java.lang.String TTY) {
@@ -183,6 +183,7 @@ public class RxConcept  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof RxConcept)) return false;
         RxConcept other = (RxConcept) obj;
@@ -193,33 +194,34 @@ public class RxConcept  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.CUI==null && other.getCUI()==null) || 
-             (this.CUI!=null &&
-              this.CUI.equals(other.getCUI()))) &&
-            ((this.LAT==null && other.getLAT()==null) || 
-             (this.LAT!=null &&
-              this.LAT.equals(other.getLAT()))) &&
-            ((this.RXCUI==null && other.getRXCUI()==null) || 
-             (this.RXCUI!=null &&
-              this.RXCUI.equals(other.getRXCUI()))) &&
-            ((this.STR==null && other.getSTR()==null) || 
-             (this.STR!=null &&
-              this.STR.equals(other.getSTR()))) &&
-            ((this.SUPPRESS==null && other.getSUPPRESS()==null) || 
-             (this.SUPPRESS!=null &&
-              this.SUPPRESS.equals(other.getSUPPRESS()))) &&
-            ((this.SY==null && other.getSY()==null) || 
-             (this.SY!=null &&
-              this.SY.equals(other.getSY()))) &&
-            ((this.TTY==null && other.getTTY()==null) || 
-             (this.TTY!=null &&
-              this.TTY.equals(other.getTTY())));
+        _equals = true &&
+                ((this.CUI == null && other.getCUI() == null) ||
+                        (this.CUI != null &&
+                                this.CUI.equals(other.getCUI()))) &&
+                ((this.LAT == null && other.getLAT() == null) ||
+                        (this.LAT != null &&
+                                this.LAT.equals(other.getLAT()))) &&
+                ((this.RXCUI == null && other.getRXCUI() == null) ||
+                        (this.RXCUI != null &&
+                                this.RXCUI.equals(other.getRXCUI()))) &&
+                ((this.STR == null && other.getSTR() == null) ||
+                        (this.STR != null &&
+                                this.STR.equals(other.getSTR()))) &&
+                ((this.SUPPRESS == null && other.getSUPPRESS() == null) ||
+                        (this.SUPPRESS != null &&
+                                this.SUPPRESS.equals(other.getSUPPRESS()))) &&
+                ((this.SY == null && other.getSY() == null) ||
+                        (this.SY != null &&
+                                this.SY.equals(other.getSY()))) &&
+                ((this.TTY == null && other.getTTY() == null) ||
+                        (this.TTY != null &&
+                                this.TTY.equals(other.getTTY())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -253,7 +255,7 @@ public class RxConcept  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RxConcept.class, true);
+            new org.apache.axis.description.TypeDesc(RxConcept.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "RxConcept"));
@@ -312,24 +314,24 @@ public class RxConcept  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

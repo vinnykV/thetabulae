@@ -53,7 +53,6 @@ public class RunTest {
     }
 
     @Test
-    @Ignore
     public void runIt() {
     }
 

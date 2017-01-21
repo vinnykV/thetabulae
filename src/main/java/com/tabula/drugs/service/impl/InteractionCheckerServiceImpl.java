@@ -90,7 +90,7 @@ public class InteractionCheckerServiceImpl implements InteractionCheckerService 
             String jsonInString = objectMapper.writeValueAsString(interactionsFromList);
             JsonNode node = objectMapper.readValue(jsonInString, JsonNode.class);
 
-            for(int i = 0; i < node.size(); i++) {
+            for (int i = 0; i < node.size(); i++) {
                 JsonNode interactionPairNode = node.get(i).get("fullInteractionType").get(0).get("interactionPair");
 
                 JsonNode descriptionNode = interactionPairNode.get(0).get("description").get("content");

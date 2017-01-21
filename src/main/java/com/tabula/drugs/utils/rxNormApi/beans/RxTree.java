@@ -1,6 +1,6 @@
 /**
  * RxTree.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
@@ -9,7 +9,7 @@ package com.tabula.drugs.utils.rxNormApi.beans;
 
 import java.util.Arrays;
 
-public class RxTree  implements java.io.Serializable {
+public class RxTree implements java.io.Serializable {
     private RxEdge[] rxEdge;
 
     private RxNode[] rxNode;
@@ -20,18 +20,18 @@ public class RxTree  implements java.io.Serializable {
     }
 
     public RxTree(
-           RxEdge[] rxEdge,
-           RxNode[] rxNode,
-           java.lang.String title) {
-           this.rxEdge = rxEdge;
-           this.rxNode = rxNode;
-           this.title = title;
+            RxEdge[] rxEdge,
+            RxNode[] rxNode,
+            java.lang.String title) {
+        this.rxEdge = rxEdge;
+        this.rxNode = rxNode;
+        this.title = title;
     }
 
 
     /**
      * Gets the rxEdge value for this RxTree.
-     * 
+     *
      * @return rxEdge
      */
     public RxEdge[] getRxEdge() {
@@ -41,7 +41,7 @@ public class RxTree  implements java.io.Serializable {
 
     /**
      * Sets the rxEdge value for this RxTree.
-     * 
+     *
      * @param rxEdge
      */
     public void setRxEdge(RxEdge[] rxEdge) {
@@ -51,7 +51,7 @@ public class RxTree  implements java.io.Serializable {
 
     /**
      * Gets the rxNode value for this RxTree.
-     * 
+     *
      * @return rxNode
      */
     public RxNode[] getRxNode() {
@@ -61,7 +61,7 @@ public class RxTree  implements java.io.Serializable {
 
     /**
      * Sets the rxNode value for this RxTree.
-     * 
+     *
      * @param rxNode
      */
     public void setRxNode(RxNode[] rxNode) {
@@ -71,7 +71,7 @@ public class RxTree  implements java.io.Serializable {
 
     /**
      * Gets the title value for this RxTree.
-     * 
+     *
      * @return title
      */
     public java.lang.String getTitle() {
@@ -81,7 +81,7 @@ public class RxTree  implements java.io.Serializable {
 
     /**
      * Sets the title value for this RxTree.
-     * 
+     *
      * @param title
      */
     public void setTitle(java.lang.String title) {
@@ -89,6 +89,7 @@ public class RxTree  implements java.io.Serializable {
     }
 
     private java.lang.Object __equalsCalc = null;
+
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof RxTree)) return false;
         RxTree other = (RxTree) obj;
@@ -99,21 +100,22 @@ public class RxTree  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true && 
-            ((this.rxEdge==null && other.getRxEdge()==null) || 
-             (this.rxEdge!=null &&
-              java.util.Arrays.equals(this.rxEdge, other.getRxEdge()))) &&
-            ((this.rxNode==null && other.getRxNode()==null) || 
-             (this.rxNode!=null &&
-              java.util.Arrays.equals(this.rxNode, other.getRxNode()))) &&
-            ((this.title==null && other.getTitle()==null) || 
-             (this.title!=null &&
-              this.title.equals(other.getTitle())));
+        _equals = true &&
+                ((this.rxEdge == null && other.getRxEdge() == null) ||
+                        (this.rxEdge != null &&
+                                java.util.Arrays.equals(this.rxEdge, other.getRxEdge()))) &&
+                ((this.rxNode == null && other.getRxNode() == null) ||
+                        (this.rxNode != null &&
+                                java.util.Arrays.equals(this.rxNode, other.getRxNode()))) &&
+                ((this.title == null && other.getTitle() == null) ||
+                        (this.title != null &&
+                                this.title.equals(other.getTitle())));
         __equalsCalc = null;
         return _equals;
     }
 
     private boolean __hashCodeCalc = false;
+
     public synchronized int hashCode() {
         if (__hashCodeCalc) {
             return 0;
@@ -121,23 +123,23 @@ public class RxTree  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getRxEdge() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRxEdge());
+            for (int i = 0;
+                 i < java.lang.reflect.Array.getLength(getRxEdge());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(getRxEdge(), i);
                 if (obj != null &&
-                    !obj.getClass().isArray()) {
+                        !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
                 }
             }
         }
         if (getRxNode() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRxNode());
+            for (int i = 0;
+                 i < java.lang.reflect.Array.getLength(getRxNode());
                  i++) {
                 java.lang.Object obj = java.lang.reflect.Array.get(getRxNode(), i);
                 if (obj != null &&
-                    !obj.getClass().isArray()) {
+                        !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
                 }
             }
@@ -151,7 +153,7 @@ public class RxTree  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(RxTree.class, true);
+            new org.apache.axis.description.TypeDesc(RxTree.class, true);
 
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:BeanService", "RxTree"));
@@ -186,24 +188,24 @@ public class RxTree  implements java.io.Serializable {
      * Get Custom Serializer
      */
     public static org.apache.axis.encoding.Serializer getSerializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanSerializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanSerializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     /**
      * Get Custom Deserializer
      */
     public static org.apache.axis.encoding.Deserializer getDeserializer(
-           java.lang.String mechType, 
-           java.lang.Class _javaType,  
-           javax.xml.namespace.QName _xmlType) {
-        return 
-          new  org.apache.axis.encoding.ser.BeanDeserializer(
-            _javaType, _xmlType, typeDesc);
+            java.lang.String mechType,
+            java.lang.Class _javaType,
+            javax.xml.namespace.QName _xmlType) {
+        return
+                new org.apache.axis.encoding.ser.BeanDeserializer(
+                        _javaType, _xmlType, typeDesc);
     }
 
     @Override

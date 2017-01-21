@@ -1,6 +1,6 @@
-var drugs = angular.module("createMedicine", []);
+var drugs = angular.module("editMedicine", ['medicineService', 'ngCookies']);
 
-drugs.controller("createMedicine", function($http, $scope) {
+drugs.controller("createMedicine", function($http, $scope, $cookies) {
 	$scope.inputdosingAndUsing = {
 		adult : {
 			doses : [],
@@ -35,11 +35,28 @@ drugs.controller("createMedicine", function($http, $scope) {
 		};
 
 		$scope.medicineDto = medicineDto;
-		$http.post('http://localhost:8090/medicine', medicineDto).then(function(response) {
-		deferred.resolve(response.data);
+
+
+        var token = $("meta[name='_csrf']").attr("content");
+        var header = $("meta[name='_csrf_header']").attr("content");
+
+        console.log(token);
+        console.log(header);
+
+		var req = {
+         method: 'POST',
+         url: 'http://localhost:8090/medicine',
+         headers: {
+           "X-CSRF-TOKEN": token
+         },
+         data: medicineDto
+        }
+
+		$http(req).then(function(response) {
+		    deferred.resolve(response.data);
 		}, function(errResponse) {
-		console.error('Error while creating User');
-		deferred.reject(errResponse);
+		    console.error('Error while creating User');
+		    deferred.reject(errResponse);
 		});
 	};
 
